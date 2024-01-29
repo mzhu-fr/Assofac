@@ -1,0 +1,117 @@
+main {
+    padding-bottom: 1em;
+}
+
+/* RESEARCH BAR */
+#searchContainer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#searchDisplay button,
+input {
+    font-size: 2em;
+}
+
+#searchDisplay input {
+    background-color: transparent;
+}
+
+#searchDisplay input:focus {
+    border-bottom: 3px solid var(--blue);
+}
+
+#searchDisplay button {
+    border-radius: 15px;
+    color: var(--white);
+    background: var(--blue);
+    padding: 0.5em;
+}
+
+#filterButton {
+    justify-content: center;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.buttonContent {
+    font-size: 2em;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    color: var(--purple);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.actived {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* PRODUCTS DISPLAY */
+
+#productsDisplay {
+    gap: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0 10% 10% 10%;
+}
+
+.displayItems {
+    background-color: var(--cream);
+    max-width: 10em;
+    width: auto;
+    height: auto;
+    margin-top: 1em;
+    padding: 1em;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.displayImgContainer {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.container {
+    text-align: center;
+    padding: 1em;
+}
+
+.container h4 {
+    font-size: 1em;
+}
+
+.container h5 {
+    font-size: 0.8em;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media (max-width:920px) {
+    img {
+        max-width: 100%;
+    }
+
+    .buttonContent {
+        font-size: 0.8em;
+    }
+
+    #searchDisplay button,
+    input {
+        font-size: 1em;
+    }
+
+}

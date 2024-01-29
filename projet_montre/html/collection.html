@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- CLASSIC -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="navbarFooter"
+        content="Project Assofac Montreuil - June 2023. This html is only to display the navbar and the footer as it was mainly to separate work efficiently. There is some simple javascript used and a lots of intricated CSS.">
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="../css/collection.css">
+
+    <title>Collection</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header id="headerNav">
+
+        <nav class="navbar">
+
+            <!-- MENU HAMBURGER -->
+            <div class="hamburger"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg></i></div>
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo"><img src="../img/logo.jpg"></a>
+
+            <!-- CONTENU NAVBAR -->
+            <ul class="menuList">
+
+                <li><a href="index.html" class="mainStyle">Home</a></li>
+
+                <li class="subMenu">
+                    <a class="mainStyle">Products</a>
+                    <div class="subMenuList">
+                        <a href="collection.html" class="subStyle">Collection</a>
+                        <a href="dbz.html" class="subStyle">DBZ</a>
+                    </div>
+                </li>
+
+                <li><a href="contact.html" class="mainStyle">Contact</a></li>
+
+            </ul>
+
+            <a href="notFound.html" class="mainStyle" id="panier"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                    viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                </svg></a>
+        </nav>
+
+    </header>
+    <!-- END NAVBAR -->
+
+    <main>
+        <section id="displayFilterBar">
+
+            <div id="searchContainer">
+                <div id="searchDisplay">
+                    <input type="search" id="searchInput" placeholder="Search product...">
+                    <button id="searchButton">Search</button>
+                </div>
+            </div>
+
+            <div id="filterButton">
+                <button class="buttonContent" onclick="filterProduct('all')">All</button>
+                <button class="buttonContent" onclick="filterProduct('silver')">Silver</button>
+                <button class="buttonContent" onclick="filterProduct('gold')">Gold</button>
+                <button class="buttonContent" onclick="filterProduct('classic')">Classic</button>
+            </div>
+
+            <div id="productsDisplay"><!-- CONTAIN IMAGE --></div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footerDiv">
+        <div class="brand">
+            <a class="footerIcon"><i class="fa fa-youtube-play"></i></a>
+            <a class="footerIcon"><i class="fa fa-twitter"></i></a>
+            <a class="footerIcon"><img src="../img/logo.jpg" class="footerLogo"></a>
+            <a class="footerIcon"><i class="fa fa-facebook"></i></a>
+            <a class="footerIcon"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div class="copyrights">
+            <p class="references">Design copyrights to MohamedH & MohamedB | Website copyrigts to mzhu & Baruaudoy92</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- NAVBAR JS -->
+    <script src="../scripts/navbar.js"></script>
+
+    <!-- COLLECTION JS -->
+    <script src="../scripts/collection.js"></script>
+
+</body>
+
+</html>

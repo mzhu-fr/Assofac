@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cacded58b0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../stylesheet/stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/about_stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/home_stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/form_stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/menu_stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet/customer_review.css">
+    <script src="../scripts/add_review.js"></script>
+
+    <title>Wok - Accueil</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <a href="home.html" class="logo"><i class="fa fa-krw"></i>OK</a>
+
+        <div id="menuBar" class="fa fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="about.html">INFORMATIONS</a>
+            <a href="contact_form.html">CONTACT US</a>
+        </nav>
+
+    </header>
+
+    <!-- HOME PAGE SECTION -->
+
+    <div class="body-home">
+
+        <h2><span>BEST OF ALL</span></h2>
+
+        <h3><span>SAMOSA</span></h3>
+        <div class="dishing">
+
+            <div class="dishCol">
+                <img src="../ressources/samosa.jpg">
+            </div>
+
+            <div class="dishCol">
+                <p>
+                    The Beef Samosa, a culinary marvel rooted in diverse cultures, boasts a golden, crispy crust that
+                    encases a tantalizing filling. Tender beef, infused with a symphony of aromatic herbs and spices,
+                    creates a mouthwatering experience that leaves a lasting impression. This samosa is a testament to
+                    the artistry of culinary craftsmanship, blending textures and flavors in perfect harmony.
+                    <br><br>On the other hand, the Vegetarian Samosa is a celebration of nature's bounty and the endless
+                    possibilities of vegetarian cuisine. Wrapped in the same flaky crust, it reveals a vibrant medley of
+                    vegetables, such as potatoes, peas, and carrots, dancing alongside an array of aromatic spices. Each
+                    bite takes you on a journey of tastes, as the ingredients unite to create a sensational explosion on
+                    the palate.
+                </p>
+            </div>
+
+        </div>
+
+        <h3><span>DISCOVERY MENU</span></h3>
+        <div class="dishing">
+
+            <div class="dishCol">
+                <img src="../ressources/home_slide1.jpg">
+            </div>
+
+            <div class="dishCol">
+                <p>
+                    The wok, a versatile and iconic cooking vessel, holds the key to unlocking a multitude of culinary
+                    possibilities. It is a symbol of tradition and innovation, hailing from the depths of Asian kitchens
+                    and now embraced by chefs around the globe. With its high heat, curved shape, and rapid cooking
+                    method, the wok allows ingredients to be seared, stir-fried, and sautéed to perfection, preserving
+                    their natural flavors and creating mouthwatering combinations.
+                    <br><br>As you peruse our menu, you will discover a tantalizing array of wok-inspired dishes that
+                    showcase the mastery of our chefs. From sizzling stir-fries to aromatic curries, each dish pays
+                    homage to the centuries-old tradition of wok cooking while embracing modern culinary techniques and
+                    creative interpretations.
+
+                </p>
+            </div>
+
+        </div>
+
+        <h3><span>STIR FRIED VEGETABLES</span></h3>
+        <div class="dishing">
+
+            <div class="dishCol">
+                <img src="../ressources/wok_dish1.jpeg">
+            </div>
+
+            <div class="dishCol">
+                <p>
+                    The wok, a versatile and iconic cooking vessel, holds the key to unlocking a multitude of culinary
+                    possibilities. It is a symbol of tradition and innovation, hailing from the depths of Asian kitchens
+                    and now embraced by chefs around the globe. With its high heat, curved shape, and rapid cooking
+                    method, the wok allows ingredients to be seared, stir-fried, and sautéed to perfection, preserving
+                    their natural flavors and creating mouthwatering combinations.
+                    <br><br>As you peruse our menu, you will discover a tantalizing array of wok-inspired dishes that
+                    showcase the mastery of our chefs. From sizzling stir-fries to aromatic curries, each dish pays
+                    homage to the centuries-old tradition of wok cooking while embracing modern culinary techniques and
+                    creative interpretations.
+
+                </p>
+            </div>
+
+        </div>
+
+        <h3><span>LEAVE A REVIEW ABOUT OUR RESTAURANT</span></h3>
+        <div class="customer-review-section"></div>
+        <!-- Input for a score from 1 - 10 and an input for text body -->
+        <div class="add-review">
+            <form>
+
+                <label for="score">Score:</label>
+                <select type="number" id="score" required max="10" min="0">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <label for="text">Review:</label>
+                <textarea id="text" required></textarea>
+
+                <button type="button" onclick="submitReview()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="sns">
+            <a><i class="fa fa-facebook"></i></a>
+            <a><i class="fa fa-instagram"></i></a>
+            <a><i class="fa fa-twitter"></i></a>
+            <a><i class="fa fa-linkedin"></i></a>
+            <a><i class="fa fa-yelp"></i></a>
+            <a><i class="fa fa-pinterest"></i></a>
+        </div>
+
+        <div class="credits">
+            <h1> created by <span>Melanie</span> | all rights reserved.</h1>
+        </div>
+
+    </footer>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/add_review.js"></script>
+</body>
+
+</html>

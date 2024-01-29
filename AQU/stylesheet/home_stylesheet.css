@@ -1,0 +1,23 @@
+.body-home {
+    text-transform: none;
+}
+
+.body-home img {
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.body-home p {
+    text-align: center;
+} 
+
+.dishing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}

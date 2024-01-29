@@ -1,0 +1,254 @@
+/* BANNER "FIND OUT MORE" */
+
+main {
+    background-color: var(--light-carbon);
+}
+
+.bodyHome {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.banner-homepage {
+    position: relative;
+    background-image: url('../img/uaHKzJq.jpg');
+    top: 0; right: 0; left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10em;
+    height: 300px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-btn {
+    position: relative;
+    font-size: 2em;
+    background-color: var(--white);
+    color : var(--carbon);
+}
+
+/* CAROUSEL CONTAINER */
+#container-carousel {
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    background: transparent;
+}
+
+.navButton {
+    background: inherit;
+    color: var(--gold);
+    /* font-size: 3em; */
+    display: none;
+}
+
+.slider-homepage {
+
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/slider_background_img.jpg');
+
+    box-sizing: border-box;
+
+    padding: 3em;
+
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+#linkSlide #slideShow {
+    background: none;
+    height: 16em;
+    width: 16em;
+    border-radius: 5px;
+    background-color: var(--gold);
+    background-position: 50%;
+    background-size: cover;
+    z-index: 2;
+}
+
+#slideShow:hover {
+    transform: scale(1.2);
+}
+
+#slideLeft {
+    background: none;
+    height: 16em;
+    width: 16em;
+    opacity: 0.8;
+    border-radius: 5px;
+    transform: skewy(3deg);
+    transform-origin: top right;
+    background-color: var(--gold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slideLeft:hover {
+    transform: scale(1.2);
+}
+
+#slideRight {
+    background: none;
+    height: 16em;
+    width: 16em;
+    opacity: 0.8;
+    border-radius: 5px;
+    transform: skewy(-3deg);
+    transform-origin: top left;
+    background-color: var(--gold);
+    display: flex;
+
+}
+  
+#slideRight:hover {
+    transform: scale(1.2);
+}
+
+  #linkSlide { 
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.textIntro {
+    position: relative;
+    text-align: center;
+    display: block;
+    background: var(--cream);
+}
+
+
+/* DISPLAY SHOP PRODUCTS */
+.shopDisplay {
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    color: var(--cream);
+}
+
+.shopDisplay h1{
+    background-color: var(--cream);
+    color: var(--carbon);
+    display: block;
+    padding: 1em;
+}
+
+.productsPanel {
+    flex-direction: column;
+    background-image: url('../img/productsPanel_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.productsU {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.displayTXT {
+    padding: 1em;
+    width: 100%;
+}
+
+.productsU.left .displayTXT {
+    background-color: var(--medium-green);
+}
+
+.productsU img {
+    height: 24em;
+    width: auto;
+}
+
+.displayPricing {
+    font-size: 3em;
+    background-color: var(--cream);
+    color: var(--carbon);
+}
+
+.productsU.middle {
+    flex-direction: row-reverse;
+}
+
+.productsU.middle .displayTXT {
+    background-color: var(--gold);
+}
+
+.productsU.right .displayTXT {
+    background-color: var(--carbon);
+}
+
+@media (max-width:920px) {
+
+    .banner-homepage {
+        padding: 7em;
+    }
+
+    .hero-btn {
+        font-size: 1em;
+    }
+
+    .navButton {
+        display: initial;
+        font-size: 1em;
+    }
+
+    #slideRight, #slideLeft {
+        display: none;
+    }
+
+    .shopDisplay h1 {
+        font-size: 2em;
+    }
+
+    .productsU img {
+        height: 8em;
+        width: 8em;
+    }
+
+    .productsU {
+        flex-direction: column;
+    }
+
+    .productsU.middle {
+        flex-direction: column;
+    }
+
+    .displayTXT h3{
+        font-size : 1.5em;
+    }
+
+    .displayPricing {
+        font-size: 1.5em;
+    }
+
+    .slider-homepage {
+        padding: none;
+    }
+
+    #linkSlide #slideShow {
+        height: 12em;
+        width: 12em;
+    }
+}

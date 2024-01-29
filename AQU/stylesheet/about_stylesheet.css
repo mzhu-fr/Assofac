@@ -1,0 +1,27 @@
+.body-about {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.infoContainer {
+    display: flex;
+    width: 100%;
+}
+
+.body-about .part {
+    margin: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+#timetable table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutTxt {
+    text-align: center;
+}

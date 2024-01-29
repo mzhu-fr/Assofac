@@ -1,0 +1,21 @@
+.contactForm {
+    margin-top: 100px;
+    text-transform: none;
+    text-align: center;
+}
+
+.contactForm form {
+    font-size: 2rem;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contactForm label {
+    display: table-cell;
+}
+
+.contactForm input {
+    display: table-cell;
+    border-left: .5rem solid var(--red);
+}

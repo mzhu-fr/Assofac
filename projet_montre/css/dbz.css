@@ -1,0 +1,237 @@
+/* ADD STYLE&COLOR TO THE TITLE AND TEXT */
+span {
+    color: var(--red);
+}
+
+.dbzTitle {
+    color: var(--yellow);
+    text-align: center;
+}
+
+.textDBZ {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#paragraph1 {
+    background: var(--cream);
+    font-size: 1em;
+}
+
+#paragraph2 {
+    font-size: 1em;
+    background: var(--light-green);
+}
+/* END ADD STYLE&COLOR TO THE TITLE AND TEXT */
+
+/* DISPLAY THE 6 IMAGES TO SHOW THE WATCH */
+.carouselList {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.carouselList div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid transparent;
+    border-radius: 50%;
+    width: 12em;
+    height: 12em;
+}
+
+.carouselList img{
+    max-height: 10em;
+    max-width: 10em;
+    height: auto;
+    width: auto;
+    padding: 1.5em;
+    border-radius: 0;
+    /* border: 1px solid inherit; */
+}
+
+#boo {
+    border: 1px solid var(--yellow);
+}
+
+#freezer {
+    border: 1px solid var(--purple);
+}
+
+#sangoku {
+    border: 1px solid var(--red);
+}
+
+#sangokuKid {
+    border: 1px solid var(--yellow);
+}
+
+#tortuegeniale {
+    border: 1px solid var(--light-green);
+}
+
+#shenlong {
+    border: 1px solid var(--medium-green);
+}
+
+/* END DISPLAY THE 6 IMAGES TO SHOW THE WATCH */
+
+/* DISPLAY OF THE WATCH */
+#mainDBZImg {
+    text-align: center;
+}
+
+#mainDBZImg img {
+    max-height: 30em;
+    max-width: 30em;
+    height: auto;
+    width: auto;
+}
+
+/* END DISPLAY OF THE WATCH */
+
+
+/* PRICE BUTTON & POP UP WINDOW STYLING */
+#price {
+    text-align: center;
+}
+
+.displayPrice {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 3em;
+    color: var(--red);
+    background-color: var(--yellow);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    z-index: 10000;
+    background-color: var(--white);
+    width: 300px;
+    max-width : 80%;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popupHeader {
+    padding: 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.popupHeader .title {
+    font-size : 1.5em;
+    font-weight: bold;
+}
+
+.popupHeader .closeButton {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.popupText {
+    padding: 1em 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#overlayDBZ {
+    position: fixed;
+    opacity: 0;
+    top: 0; left: 0; right: 0; bottom:0;
+    background-color: rgba(0, 0 ,0 ,0.5);
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+#overlayDBZ.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* END PRICE BUTTON & POP UP WINDOW STYLING */
+
+@media (max-width: 920px) {
+
+    /* APPLY STYLE TO THE BUTTON PRICE */
+    .displayPrice {
+        padding: 2px;
+        border-radius: 5px;
+        font-size: 1.5em;
+    }
+
+    /* APPLY SCROLL TO THE ENTIRE DIV OF IMAGE DISPLAY AND IMAGE SELECT */
+    .containerCarousel {
+        overflow-x: scroll;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* ADD STYLING TO THE DISPLAY OF 6 IMAGES */
+    .carouselList {
+        justify-content: flex-start;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        overflow-x: auto;
+        gap: 0.2em;
+        width: 100%;
+    }
+
+    .textDBZ {
+        padding: none;
+    }
+
+    /* RESIZE WATCH IMAGE TO ADAPT PHONE SCREEN */
+    #mainDBZImg img {
+        max-height: 15em;
+        max-width: 15em;
+    }
+
+    /* RESIZE 6 IMAGES TO ADAPT PHONE SCREEN */
+    .carouselList img{
+        max-height: 8em;
+
+        border-radius: 0;
+        border-radius: 50%;
+    }
+
+    .carouselList div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #blankImg {
+        display: initial;
+    }
+ 
+    #boo,
+    #freezer,
+    #sangoku,
+    #sangokuKid,
+    #tortuegeniale,
+    #shenlong {
+        border: none;
+    }
+} 
