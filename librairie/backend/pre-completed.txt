@@ -1,0 +1,22 @@
+
+## REGISTER USER
+{
+    "email":"tt@tt.com",
+    "username":"randomname",
+    "password":"1234",
+    "prenom":"melanie",
+    "nom":"mochi",
+    "adresse":"somewhere on earth",
+    "codepost":"12345"
+}
+
+## REGISTER BOOK
+{
+    "book_title":"Seigneur des Anneaux",
+    "book_author":"J R R Tolkien",
+    "book_desc":"Le Seigneur des anneaux est un roman de J. R. R. Tolkien paru en trois volumes en 1954 et en 1955. Prenant place dans le monde fictionnel de la Terre du Milieu, il suit la quête du hobbit Frodon Sacquet",
+    "book_price":"32.49",
+    "book_cover":"cover_from_internet",
+    "book_quantite":"250",
+    "cat":"fantastique"
+}
