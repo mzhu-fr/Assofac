@@ -98,3 +98,9 @@ CHANGE COLUMN `status` `status` VARCHAR(100) NULL DEFAULT 'employed' ,
 CHANGE COLUMN `grade` `grade` VARCHAR(10) NULL DEFAULT 'regular' ,
 CHANGE COLUMN `email` `email` VARCHAR(80) NULL DEFAULT NULL ;
 CHANGE COLUMN `created` `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+INSERT INTO `garage`.`cars` (`name`, `brand`, `model`, `year`, `price`, `description`, `secondhand`, `km`, `co2`, `fuel`, `transmission`, `type`, `color`, `nb_places`, `DIN_power`) VALUES ('Dacia Duster', 'Dacia', '356', '2018', '100000000', 'Vraiment super belle', 'no', '0', '0.3', 'Diesel', 'Manual', '4x4', 'Black', '5', '800');
+INSERT INTO `garage`.`cars` (`name`, `brand`, `model`, `year`, `price`, `description`, `secondhand`, `km`, `co2`, `fuel`, `transmission`, `type`, `color`, `nb_places`, `DIN_power`) VALUES ('Audi Q4 e-tron', 'Audi', 'Q4', '2023', '67000', 'Avec ses proportions impressionnantes et ses éléments de design haut de gamme, la Nouvelle Audi SQ7 dégage un dynamisme pur. Hautement fonctionnel, son intérieur généreux et modulable s’adapte à toutes les situations pour un confort à bord inégalé.', 'no', '0', '0.07', 'Hybride', 'Manual', 'Berline', 'White', '5', '1500');
+ALTER TABLE `garage`.`cars` 
+CHANGE COLUMN `model` `model` VARCHAR(500) NULL DEFAULT NULL ;
+UPDATE `garage`.`cars` SET `model` = 'https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grz22nJRdOO64303Rnt5h8zlKj7G1BNwMrUBfjaSDB_AVI8HkCCY5dDGASZN5CEDEBxGfSYWZgYK0AMiIZQICPr7QopyCxKDFXrzwzpSRDUMOASCDM7uIa4ujpEwwAGOPW-ukAAAA?wid=291' WHERE (`idcars` = '2')
+UPDATE `garage`.`cars` SET `model` = 'https://www.audi.fr/content/dam/nemo/fr/Teasers-Homepage/2024/media-text-combi-small/1496x830_RS_6_4on4_12022024.png?imwidth=1459' WHERE (`idcars` = '2')

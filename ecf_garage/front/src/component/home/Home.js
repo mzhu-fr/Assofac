@@ -38,7 +38,7 @@ export const Home = () => {
                         <span>Brand :</span>
                         <p>{car.brand}</p>
                     </div>
-                    <div>
+                    <div id="home-car-img">
                         <img src={car.model} alt="photo" />
                     </div>
                     <div>

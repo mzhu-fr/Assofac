@@ -18,6 +18,13 @@ export const db = mysql.createConnection({
     database: process.env.DB_DATABASE
 });
 
+// export const db = mysql.createConnection({
+//     host:"localhost",
+//     user:"root",
+//     password:"root",
+//     database:"garage"
+// })
+
 db.connect(function (err) {
     if (err) {
         return console.error('error: ' + err.message);

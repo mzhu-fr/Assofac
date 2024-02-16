@@ -90,7 +90,7 @@ export const Car = () => {
                         <p>{car.brand}</p>
                     </div>
                     <div>
-                        <span>Model :</span>
+                        <span>Model :</span><br/>
                         <img src={car.model} alt="photo" />
                     </div>
                     <div>
