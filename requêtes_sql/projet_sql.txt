@@ -1,0 +1,142 @@
+Q01 :
+SELECT nom, annéeNaiss FROM projet_sql.artiste WHERE annéeNaiss < 1950
+
+Q02 :
+SELECT titre, genre FROM projet_sql.film WHERE genre="Drame"
+
+Q03 :
+SELECT nomRôle, titre
+FROM projet_sql.role
+LEFT JOIN projet_sql.artiste ON artiste.idArtiste = role.idActeur
+LEFT JOIN projet_sql.film ON role.idFilm = projet_sql.film.idFilm
+WHERE nom="Willis" AND prénom="Bruce"
+
+Q04 :
+SELECT nom, prénom FROM projet_sql.artiste
+LEFT JOIN projet_sql.film ON film.idRéalisateur = artiste.idArtiste
+WHERE film.titre="Memento"
+
+Q05 :
+SELECT note FROM notation
+LEFT JOIN film ON film.idFilm = notation.idFilm
+WHERE titre="Fargo"
+
+Q06 :
+SELECT nom, prénom, titre FROM projet_sql.role
+LEFT JOIN projet_sql.artiste ON role.idActeur = artiste.idArtiste
+LEFT JOIN projet_sql.film on film.idFilm = role.idFilm
+WHERE nomRôle="Chewbacca"
+
+
+Q07 : 
+SELECT titre FROM projet_sql.artiste
+LEFT JOIN projet_sql.role ON artiste.idArtiste = role.idActeur
+LEFT JOIN projet_sql.film ON role.idFilm = projet_sql.film.idFilm
+WHERE nomRôle="John McClane" AND artiste.nom="Willis" AND artiste.prénom="Bruce"
+
+Q08 :
+SELECT nomRôle, nom, prénom, titre FROM projet_sql.role
+LEFT JOIN projet_sql.artiste ON role.idActeur = artiste.idArtiste
+LEFT JOIN projet_sql.film ON film.idFilm = role.idFilm
+WHERE titre="Sueurs froides"
+
+Q09 :
+SELECT titre FROM projet_sql.internaute
+LEFT JOIN projet_sql.notation ON notation.email = internaute.email
+LEFT JOIN projet_sql.film ON notation.idFilm = film.idFilm
+WHERE internaute.nom="Nom0" AND internaute.prénom="Prénom0"
+
+Q10 :
+SELECT titre FROM film
+JOIN role as Roles ON  film.idFilm = Roles.idFilm 
+JOIN artiste as Realisateur ON  film.idRéalisateur = Realisateur.idArtiste
+JOIN artiste as Acteur ON Roles.idActeur = Acteur.idArtiste 
+WHERE Realisateur.nom="Burton" AND Realisateur.prénom="Tim"
+AND Acteur.nom="Depp" AND Acteur.prénom="Johnny"
+
+Q11 :
+SELECT titre, nomRôle, nom, prénom FROM projet_sql.role
+JOIN projet_sql.film ON film.idFilm = role.idFilm
+JOIN projet_sql.artiste ON role.idActeur = artiste.idArtiste
+WHERE nom="Allen" AND prénom="Woody"
+
+Q12 :
+SELECT nom, nomRôle, titre FROM projet_sql.artiste
+JOIN projet_sql.film ON film.idRéalisateur = idArtiste
+JOIN projet_sql.role ON idActeur = idArtiste
+WHERE film.idRéalisateur = role.idActeur
+
+Q13 :
+SELECT DISTINCT titre, nomRôle, nom, prénom
+FROM film
+JOIN artiste ON idArtiste = film.idRéalisateur
+JOIN role ON idActeur = artiste.idArtiste
+WHERE nom="Tarantino" AND prénom="Quentin"
+AND role.idActeur = film.idRéalisateur
+
+Q14 :
+SELECT DISTINCT titre, nomRôle, nom, prénom
+FROM film
+JOIN artiste ON idArtiste = film.idRéalisateur
+JOIN role ON idActeur = artiste.idArtiste
+WHERE role.idActeur = film.idRéalisateur
+
+Q15 :
+SELECT film.titre
+FROM film
+JOIN artiste AS Realisateur ON film.idRéalisateur = Realisateur.idArtiste
+LEFT JOIN (
+    SELECT role.idFilm
+    FROM role
+    JOIN artiste AS Acteur ON role.idActeur = Acteur.idArtiste
+    WHERE Acteur.nom = 'Stewart' AND Acteur.prénom = 'James'
+) AS JamesStewartRoles ON film.idFilm = JamesStewartRoles.idFilm
+WHERE Realisateur.nom = 'Hitchcock' AND Realisateur.prénom = 'Alfred'
+    AND JamesStewartRoles.idFilm IS NULL;
+
+Q16 :
+SELECT titre, idActeur, idRéalisateur, Realisateur.nom AS "Realisateur nom", Realisateur.prénom AS "Realisateur prénom", Acteur.nom AS "Acteur Nom", Acteur.prénom AS "Acteur Prénom" from film
+JOIN role as Roles on Roles.idFilm = film.idFilm
+JOIN artiste as Acteur ON Roles.idActeur = Acteur.idArtiste
+JOIN artiste as Realisateur ON film.idRéalisateur = Realisateur.idArtiste
+WHERE Acteur.prénom = Realisateur.prénom AND Acteur.nom != Realisateur.nom
+
+Q17 :
+SELECT titre from film
+LEFT JOIN role ON film.idFilm = role.idFilm
+WHERE role.idFilm IS NULL;
+
+Q18 :
+SELECT titre, note, internaute.nom FROM internaute
+JOIN notation ON notation.email = internaute.email
+JOIN film ON notation.idFilm = film.idFilm
+WHERE titre NOT IN (internaute.nom="Nom1" AND internaute.prénom="Prénom1")
+
+Q19 :
+SELECT nom, prénom from film
+RIGHT JOIN artiste ON film.idRéalisateur = artiste.idArtiste
+WHERE film.idRéalisateur IS NULL
+
+Q20 :
+SELECT AVG(note) FROM notation
+JOIN film ON film.idFilm = notation.idFilm
+WHERE titre="Memento"
+
+Q21 :
+SELECT (COUNT(idFilm)) AS "Nb Film", idArtiste, nom, prénom FROM artiste
+JOIN film ON idRéalisateur = idArtiste
+GROUP BY idArtiste
+
+Q22 :
+SELECT (COUNT(idFilm)) AS "Nb Film", idArtiste, nom, prénom FROM artiste
+JOIN film ON idRéalisateur = idArtiste
+GROUP BY idArtiste
+HAVING (COUNT(idFilm) > 2)
+
+Q23 :
+SELECT AVG(notation.note), titre
+FROM projet_sql.notation
+LEFT JOIN projet_sql.film ON film.idFilm = notation.idFilm
+GROUP BY film.idFilm
+HAVING AVG(notation.note) > 7
+
