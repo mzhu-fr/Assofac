@@ -1,0 +1,97 @@
+.meteo-app {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(5deg, rgba(52, 32, 86, 1) 0%, rgba(84, 84, 197, 1) 50%, rgba(99, 156, 217, 1) 100%);
+}
+
+.search-meteo {
+    display: flex;
+
+    justify-content: center;
+    height: 3em;
+}
+
+.display-weather {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.border-box {
+    background: rgba(229, 253, 252, 0.2);
+    color: var(--blanc);
+    padding: 5em;
+    width: 25%;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.weather-inline {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: 0 5px 0 0 var(--violet);
+
+    margin: auto;
+    padding: 1em;
+    width: 20%;
+}
+
+.weather-content {
+    display: flex;
+    font-size: 1em;
+}
+
+.display-today {
+    text-align: center;
+    color: var(--blanc);
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.maintext {
+    font-size: 2.5em;
+}
+
+.maintext>img {
+    width: 5em;
+}
+
+.cityname {
+    font-size: 4em;
+}
+
+.temperature {
+    font-size: 3.5em;
+}
+
+.date {
+    display: flex;
+    gap: 10px
+}
+
+@media (max-width:500px) {
+    .weather-inline {
+        width: 80%;
+    }
+
+    .border-box {
+        /* padding: 10px; */
+        width: auto;
+    }
+
+    .display-weather {
+        flex-direction: column;
+    }
+
+    .maintext {
+        font-size: 2em;
+    }
+}

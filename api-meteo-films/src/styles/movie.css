@@ -1,0 +1,102 @@
+.display-all-movies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-card>img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie-card {
+    box-shadow: 10px 5px 5px grey;
+    width: 250px;
+    height: auto;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    font-weight: bold;
+}
+
+.movie-title>h3 {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.display-movies,
+.recommendation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-background {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    /* text-align: center; */
+}
+
+.desc {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 2em;
+    margin: 10px;
+}
+
+.actor-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+    text-align: center;
+}
+
+.actor-display>img {
+    width: auto;
+    height: 150px;
+}
+
+.actor-display {
+    width: 170px;
+}
+
+.wrap-actor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .image-background {
+        font-size: 1.5em;
+    }
+
+}
