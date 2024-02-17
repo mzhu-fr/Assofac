@@ -1,0 +1,135 @@
+@media (max-width: 1330px) {
+    .art-gallery img {
+        height: 100px;
+    }
+
+    .art-gallery-style,
+    .video-gallery-style,
+    .music-gallery-style {
+        flex-direction: column;
+    }
+}
+
+/* ADD BANNER */
+.banner-background {
+    z-index: 1;
+    position: fixed;
+}
+
+#banner-pic {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* PART OF THE USER NAMING AND PROFILE */
+
+.profile-wall {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-banner {
+    width: auto;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--opacity-primary);
+}
+
+#avatar-user {
+    height: 25%;
+    margin: 2em;
+}
+
+/* CONTENT OF THE WALL FYP */
+
+.profile-fyp {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+/* FILTER BUTTON STYLE */
+
+#filterButton {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* POSTING CONTENT STYLE */
+.posting-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--text);
+    border-radius: 5px;
+}
+
+/* CONTENT IMG + VID + MUSIC */
+#wall-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.art-gallery img {
+    width: auto;
+    height: 250px;
+    object-fit: contain;
+}
+
+.art-gallery,
+.video-gallery,
+.music-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.art-gallery-style,
+.video-gallery-style,
+.music-gallery-style {
+    display: flex;
+}
+
+.music-gallery-style {
+    flex-direction: column;
+}
+
+.gallery-modal {
+    background-color: var(--opacity-primary);
+    position: fixed;
+    z-index: 120;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.modal-image-pos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.close-modal {
+    font-size: 3em;
+    color: var(--black)
+}
+
+.modal-image-pos img {
+    height: 35vh;
+    width: auto;
+}

@@ -1,0 +1,107 @@
+/* BIENVENUE TEXTE */
+
+.homeBody h1 {
+    font-size: 8em;
+}
+
+.welcomeSection {
+    background: var(--primary);
+}
+
+.welcomeLanguage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    background: var(--opacity-primary);
+}
+
+.welcomeLanguage>p {
+    color: var(--black);
+    font-size: 4em;
+}
+
+.welcomeLanguage>h1 {
+    color: var(--secondary);
+}
+
+/* TITRE CONNECTIFY */
+.midTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.midTitle>h1 {
+    font-family: 'Chicle', cursive;
+    color: var(--secondary);
+}
+
+
+.videoHomePage {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.videoBox {
+    z-index: -1;
+    position: fixed;
+}
+
+/* NEWSLETTER */
+
+.news {
+    background-color: var(--secondary-opacity);
+    border-radius: 15px;
+    padding: 2em;
+    width: 80%;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.news>p {
+    padding-bottom: 1em;
+}
+
+.news>button {
+    margin-top: 1em;
+    background-color: var(--opacity-primary);
+}
+
+.newsletter {
+    display: flex;
+    height: 50vh;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--black)
+}
+
+@media (max-width: 1300px) {
+    .welcomeLanguage>p {
+        font-size: 1em;
+    }
+
+    .homeBody h1 {
+        font-size: 3em;
+    }
+}

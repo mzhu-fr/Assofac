@@ -1,0 +1,140 @@
+.navbar {
+    background: inherit;
+    background-color: transparent;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+
+
+}
+
+.navbarContent {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.navName {
+    margin-right: 1em;
+    color: var(--white);
+}
+
+.logoNav {
+    font-size: 2em;
+    padding: 0.2em;
+    text-shadow: 1px 1px 1px var(--primary);
+    font-family: 'Chicle', cursive;
+    color: var(--secondary)
+}
+
+.homeStyle {
+    color: var(--primary);
+    text-shadow: 1px 1px 1px var(--black);
+}
+
+.signBox {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 0.5em;
+    background-color: var(--secondary);
+}
+
+
+.menu-burger,
+#nav-mobile,
+.open-nav {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay a {
+    justify-content: center;
+    text-align: center;
+    align-items: ce;
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* top: 25%; */
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 30px; */
+    color: var(--secondary);
+    font-size: 2em;
+}
+
+.overlay .open-nav {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: var(--secondary);
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    font-size: 46px;
+    top: 0px;
+    right: 35px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 1300px) {
+    .logoNav {
+        font-size: 1em;
+        /* margin: auto; */
+    }
+
+    .navbarContent {
+        font-size: 0.5em;
+        display: none;
+    }
+
+
+    .menu-burger {
+        font-size: 44px;
+        cursor: pointer;
+        margin-top: 20px;
+        display: block;
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 0px;
+        /* right: 35px; */
+    }
+
+    #nav-mobile {
+        display: initial;
+    }
+    .navName {
+        margin-right: 0;
+    }
+}
