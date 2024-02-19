@@ -1,0 +1,240 @@
+main {
+    margin-top: 20%;
+}
+
+#bodyDice {
+    background-color: var(--dark-blue);
+}
+
+/* SET THE STARTING PLAYER AND THE BUTTON NEW GAME */
+#displayInfo {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+
+/* THE FORM TO FILL PLAYER NAME */
+.formPlayerName {
+    z-index: 1999;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+
+    border: 1px solid var(--white);
+    background-color: var(--dice-text-color);
+    font-size: 3em;
+    padding: 5px;
+}
+
+.formPlayerName label {
+    color: var(--light-pink);
+}
+
+.formPlayerName button {
+    background-color: transparent;
+    font-size: 0.5em;
+}
+
+.formPlayerName input {
+    padding: 1em;
+    border-bottom: 1px solid var(--light-pink);
+    background-color: transparent;
+}
+
+.playerNameDisplay {
+    font-size: 3em;
+}
+
+/* NEW GAME BUTTON */
+#displayInfo button{
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 5px;
+    border-color: var(--dice-text-color);
+    color: var(--dice-text-color);
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+#displayPlayerStart {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--global-color);
+    font-size: 3em;
+}
+
+/* BUTTONS */
+
+.buttonPlay {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.buttonPlay button {
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    font-weight: bold;
+    color: inherit;
+}
+
+/* OVERALL SCREEN APPEARANCE */
+.dicePlay {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+#diceImgOne, #diceImgTwo {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.dicePlay img {
+    mix-blend-mode: multiply;
+    width: 250px;
+    height: 250px;
+}
+
+.diceImg {
+    padding-top: 10px;
+}
+
+.display-left {
+    color: var(--dice-text-color);
+}
+
+.display-right {
+    color: var(--light-pink)
+}
+
+/* OVERLAY TO DISABLE ONE SIDE OF THE SCREEN */
+.overlay {
+    /* display: flex; */
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.overlay-left {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    pointer-events: none;
+}
+
+.overlay-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    pointer-events: none;
+}
+
+/* SET THE AESTHETIC FOR THE SCREEN */
+#playerOne {
+    left: 0;
+    background: var(--light-pink);
+    z-index: 10;
+}
+
+#playerTwo {
+    right: 0;
+    background-color: var(--medium-pink);
+    z-index: 10;
+}
+
+.playerDisplay {
+    top: 0; bottom: 0;
+    width: 50%;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.displayScoreBoard p {
+    font-size: 3em;
+}
+.displayScoreBoard {
+    display: flex;
+}
+
+.displayRoundScore, #displayGlobalOne, #displayGlobalTwo {
+    padding: 30px;
+}
+
+#footerDice {
+    color: var(--light-blue);
+}
+
+#headerDice {
+    color: var(--light-blue);
+    background: var(--dark-blue);
+}
+
+#logoDice svg {
+    fill : var(--light-blue);
+}
+
+
+@media (max-width: 1100px) {
+
+
+    .dicePlay img {
+        mix-blend-mode: multiply;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 3/2;
+        object-fit: contain;
+    }
+
+    #diceImgOne, #diceImgTwo {
+        display: flex;
+        width: 50%;
+        height: 25%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonPlay button {
+        font-size: 1em;
+    }
+
+    .displayRoundScore, #displayGlobalOne, #displayGlobalTwo{
+        padding: 10px;
+    }
+    
+    .displayScoreBoard p {
+        font-size: 1em;
+    }
+
+    .playerNameDisplay {
+        font: 1em;
+    }
+
+    #displayInfo button {
+        font-size: 1em;
+    }
+    
+    .playerDisplay {
+        position: absolute;
+    }
+}

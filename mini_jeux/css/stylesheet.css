@@ -1,0 +1,141 @@
+
+
+
+:root {
+    --light-pink : #fddfea;
+    --dice-text-color : #f23f7e;
+    --medium-pink : #f786ae;
+    --global-color : #4d2e38;
+    --round-color : #080808;
+
+    --white : #e8f8fd;
+
+    --hangman-text-color : #4682bf;
+    --light-blue : #a2e8f9;
+    --dark-blue : #008080;
+    --medium-blue : #55d4f4;
+
+    --light-green : #148209;
+    --peach : #ff7952;
+
+    --light-purple : #deb7f1;
+    --dark-purple : #6f0ba6;
+    --err-purple : #311442;
+}
+
+* {
+    color: inherit;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    padding-top: 1em;
+    z-index: 100000;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 1em;
+}
+
+body {
+    margin-top: 10%;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0 ;
+}
+
+.logo {
+    font-size: 10em;
+    padding-left: 10px;
+}
+
+
+.navbar {
+    flex: 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+
+footer {
+    text-align: center;
+    bottom: 0; left: 0; right: 0;
+    /* position: absolute; */
+    z-index: 10000;
+}
+
+#bodyHome {
+    background-color: var(--dice-text-color);
+}
+
+#logoHome svg {
+    fill : var(--light-pink);
+}
+
+#footerHome {
+    top:0; right: 0; left:0;
+    position: relative;
+}
+
+#headerHome {
+    
+    background-color: var(--dice-text-color);
+}
+
+#navbarHome {
+    color: var(--light-pink);
+}
+
+#footerHome {
+    color: var(--light-pink);
+}
+
+.dice {
+    background-color: var(--light-pink);
+    color : var(--hangman-text-color);
+}
+
+#diceGame{
+    padding-top: 10%;
+}
+
+.hangman {
+    color: var(--light-pink);
+    background-color : var(--hangman-text-color);
+}
+
+@media (max-width: 1100px) {
+    .logo {
+        font-size: 5em;
+        padding-left: 10px;
+    }
+
+    .navbar {
+        font-size: 1.5em;
+    }
+
+    footer {
+        position: absolute;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="Contact our support in case you encounter any problem.">
+
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Contact Us</title>
+</head>
+<body id="bodyContact">
+
+    <header id="headerContact">
+
+        <div class="logo" id="logoContact">
+            <a href="home.html"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/></svg></a>
+        </div>
+        <nav class="navbar" id="navbarContact">
+            <a href="diceGame.html">Dice Game</a>
+            <a href="hangman.html">Hangman Game</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="bodyContact">
+            <div class="form">
+                <form onsubmit="event.preventDefault(); validateForm()" id="formContent">
+
+                    <h2 id="contactUS">Did you encounter a problem while playing ? Leave us a message!</h2>
+
+                    <div>
+                        <label for="firstName">Username :</label>
+                        <input type="text" id="firstName" placeholder="Your username...">
+                        <small class="err"></small>
+                    </div>
+
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="text" id="email" placeholder="whatever@mail.com">
+                        <small class="err"></small>
+                    </div>
+
+                    <div>
+                        <label for="message">Message :</label>
+                        <textarea type="text" id="message" placeholder="Your message" rows="8"></textarea>
+                        <small class="err"></small>
+                    </div>
+
+                    <div class="submitButton">
+                        <input onclick="validateForm()" type="submit" value="Submit">
+                        <p id="success"></p>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer id="footerContact">
+        <p>Copyright © 2023 by Mélanie ZHU | Assofac project | All rights reserved</p>
+    </footer>
+
+    <script src="../scripts/contact.js"></script>
+</body>
+</html>

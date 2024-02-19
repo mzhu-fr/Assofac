@@ -1,0 +1,78 @@
+#mainHangman p{
+    text-align: center;
+    font-size: 2em;
+}
+
+#bodyHangman {
+    background: var(--medium-pink);
+}
+
+#logoHangman svg {
+    fill: var(--light-pink);
+}
+
+#navbarHangman {
+    color: var(--light-pink);
+}
+
+#hangmanDraw {
+    width: 300px;
+    height: 300px;
+}
+
+.hangmanGame {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hangmanImg {
+    flex : 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hangmanDisplay {
+    flex: 1;
+}
+
+#textBox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 550px;
+    width: 90%;
+    margin: 5em auto 1em auto;
+    padding: 1em;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background-color: var(--white);
+}
+
+#textBox label {
+    font-size: 3em;
+    color: var(--dark-blue);
+}
+
+#textBox input {
+    height: 3em;
+    font-size: 3em;
+    background-color: transparent;
+    color: var(--dark-blue);
+}
+
+#textBox button {
+    padding-top: 10px;
+    border-radius: 25px;
+    font-size: 2em;
+    color: var(--dark-blue);
+    border : 1px solid var(--dark-blue);
+    background-color: transparent;
+}
+
+.displayText {
+    width: 100%;
+    height: 300px;
+}

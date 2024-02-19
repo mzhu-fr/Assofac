@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="A Dice Game to play with your friends ! Enjoy it while you can.">
+
+    <link rel="stylesheet" href="../css/diceGame.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Dice Game</title>
+</head>
+
+<body id="bodyDice">
+
+    <header id="headerDice">
+
+        <div class="logo" id="logoDice">
+            <a href="home.html"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/></svg></a>
+        </div>
+        <nav class="navbar" id="navbarDice">
+            <a href="diceGame.html">Dice Game</a>
+            <a href="hangman.html">Hangman Game</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="diceGame">
+
+            <div id="displayInfo">
+    
+                <div id="displayPlayerStart">
+                    <p class="playerStart" id="playerTwoStart"></p>
+                    <p class="playerStart" id="playerTwoStart"></p>
+                </div>
+                <div><button id="newGame">NEW GAME</button></div>
+
+                
+            </div>
+
+            <!-- GET THE NAME OF THE PLAYERS -->
+            <div class="formPlayerName">
+                <label for="name">Players name</label>
+                <input type="text" class="inputPlayerName" id="playerOneName" placeholder="player one name">
+                <input type="text" class="inputPlayerName" id="playerTwoName" placeholder="player two name">
+                <button onclick="getPlayerName()">Players Name</button>
+            </div>
+
+
+            <div class="dicePlay">
+
+                <div class="playerDisplay display-left" id="playerOne">
+
+                    <p class="playerNameDisplay"></p>
+
+                    <div class="displayScoreBoard">
+
+                        <div class="displayRoundScore" id="displayRoundOne">
+                            <h4>ROUND</h4>
+                            <p id="displayRoundOneTxt"></p>
+                        </div>
+                        <div id="displayGlobalOne">
+                            <h4>GLOBAL</h4>
+                            <p id="displayGlobalOneTxt"></p>
+                        </div>
+
+                    </div>
+                    
+                    <div class="overlay overlay-left"></div>
+                    <div class="diceImg" id="diceImgOne"></div>
+                    <div class="buttonPlay button-left">
+                        <button class="holdButton" id="holdButtonOne">HOLD</button>
+                        <button class="rollDice" id="rollDiceOne">ROLL</button>
+                    </div>
+                    
+                    
+                </div>
+        
+                
+        
+                <div class="playerDisplay display-right" id="playerTwo">
+        
+                    <p class="playerNameDisplay"></p>
+
+                    <div class="displayScoreBoard">
+
+                        <div class="displayRoundScore" id="displayRoundTwo">
+                            <h4>ROUND</h4>
+                            <p id="displayRoundTwoTxt"></p>
+                        </div> 
+    
+                        <div id="displayGlobalTwo">
+                            <h4>GLOBAL</h4>
+                            <p id="displayGlobalTwoTxt"></p>
+                        </div>
+
+                    </div>
+                    
+                    <div class="overlay overlay-right"></div>
+                    <div class="diceImg" id="diceImgTwo"></div>
+                    <div class="buttonPlay button-right">
+                        <button class="holdButton" id="holdButtonTwo">HOLD</button>
+                        <button class="rollDice" id="rollDiceTwo">ROLL</button>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </section>
+
+        <footer id="footerDice">
+            <p>Copyright © 2023 by Mélanie ZHU | Assofac project | All rights reserved</p>
+        </footer>
+
+    </main>
+
+
+
+
+    <script src="../scripts/diceScripts.js"></script>
+    <script src="../scripts/hangman.js"></script>
+
+
+</body>
+
+</html>

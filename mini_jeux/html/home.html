@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="A short collection of games ! Come and play Hangman or Dice Game !">
+
+    <link rel="stylesheet" href="../css/stylesheet.css">
+
+    <title>My Games</title>
+</head>
+<body id ="bodyHome">
+    <header id="headerHome">
+
+        <div class="logo" id="logoHome">
+            <a href="home.html"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z"/></svg></a>
+        </div>
+        <nav class="navbar" id="navbarHome">
+            <a href="diceGame.html">Dice Game</a>
+            <a href="hangman.html">Hangman Game</a>
+            <a href="contactUs.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="gameRules dice" id="diceGame">
+
+            <h2>Roll a Dice Game Rules</h2>
+            <p>The Roll a Dice game is a two-player game where each player takes turns rolling a dice and accumulating scores. The goal is to reach a target score to win the game.</p>
+
+            <h3>Game Objective</h3>
+            <p>The objective of the Roll a Dice game is to accumulate a target score before your opponent does. The first player to reach or exceed the target score wins the game.</p>
+
+            <h3>Gameplay</h3>
+            <p>The gameplay of Roll a Dice typically involves the following steps:</p>
+            <ol>
+                <li>Two players take turns rolling a six-sided dice.</li>
+                <li>The current player's dice roll value is added to their round score.</li>
+                <li>If the dice roll value is equal to 1, the player's round score becomes 0, and their turn ends.</li>
+                <li>The player can choose to "Hold" their round score, which adds it to their global score and ends their turn.</li>
+                <li>After a player holds their round score or rolls a 1, it becomes the other player's turn.</li>
+                <li>The game continues until one of the players reaches or exceeds the target score.</li>
+            </ol>
+
+            <h3>Scoring</h3>
+            <p>The Roll a Dice game typically involves the following scoring components:</p>
+            <ul>
+                <li><strong>Round Score:</strong> The score accumulated by the current player during their turn. It increases with each dice roll but resets to 0 if a 1 is rolled.</li>
+                <li><strong>Global Score:</strong> The total score accumulated by a player throughout the game. It is updated when the player chooses to "Hold" their round score.</li>
+            </ul>
+
+            <h3>Winning the Game</h3>
+            <p>The game is won by the first player to reach or exceed the target score. This target score is typically set to 100, but it can be adjusted based on the players' preference.</p>
+
+            <h3>Have Fun!</h3>
+            <p>Enjoy playing the Roll a Dice game and have fun competing with your opponent to reach the target score and emerge as the winner!</p>
+        </section>
+
+        <section class="gameRules hangman" id="hangman">
+            <h2>Hangman Game Rules</h2>
+            <p>The Hangman game is a guessing game where the player attempts to guess a hidden word or phrase by suggesting letters within a certain number of attempts.</p>
+
+            <h3>Game Objective</h3>
+            <p>The objective of the Hangman game is to correctly guess the hidden word or phrase by suggesting individual letters. The player must guess all the letters in the word before running out of attempts.</p>
+
+            <h3>Gameplay</h3>
+            <p>The gameplay of Hangman typically involves the following steps:</p>
+            <ol>
+                <li>A word or phrase is selected as the secret word by one player.</li>
+                <li>The secret word is represented by dashes or underscores, indicating the number of letters in the word. For example, the word "hangman" would be represented as "-------".</li>
+                <li>The player(s) guess individual letters of the word, one at a time.</li>
+                <li>If the guessed letter is present in the secret word, all occurrences of that letter are revealed in their correct positions. For example, if the letter 'a' is guessed in the word "hangman", the dashes would update to "--a---a-".</li>
+                <li>If the guessed letter is not present in the secret word, the number of attempts is reduced, and a part of the hangman's body is drawn as a penalty. The hangman typically consists of a gallows, head, body, arms, and legs.</li>
+                <li>The game continues until one of the following conditions is met:
+                <ul>
+                    <li>The player correctly guesses all the letters in the word, completing the word or phrase.</li>
+                    <li>The player runs out of attempts, resulting in a loss.</li>
+                </ul>
+                </li>
+            </ol>
+
+            <h3>Winning and Losing</h3>
+            <p>The player wins the game by guessing all the letters in the word before running out of attempts. If the player completes the word, they are considered the winner.</p>
+            <p>If the player runs out of attempts before completing the word, they lose the game.</p>
+
+            <h3>Variations</h3>
+            <p>There can be variations in the rules and gameplay of Hangman depending on the preferences of the players. Some variations include:</p>
+            <ul>
+                <li>Limiting the number of incorrect guesses allowed.</li>
+                <li>Allowing multiple players to take turns guessing letters.</li>
+                <li>Adding additional penalties to the drawing of the hangman's body.</li>
+            </ul>
+
+            <h3>Have Fun!</h3>
+            <p>Enjoy playing Hangman and have fun trying to guess the hidden words or phrases!</p>
+        </section>
+
+
+    </main>
+    
+    <footer id="footerHome">
+        <p>Copyright © 2023 by Mélanie ZHU | Assofac project | All rights reserved</p>
+    </footer>
+</body>
+</html>

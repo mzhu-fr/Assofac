@@ -1,0 +1,84 @@
+#bodyContact {
+    background-color: var(--dark-purple);
+}
+
+#logoContact svg {
+    fill: var(--light-purple);
+}
+
+#navbarContact {
+    color: var(--light-purple);
+}
+
+#footerContact {
+    color: var(--light-purple);
+}
+
+.bodyContact {
+    display: flex;
+}
+
+.form {
+    flex: 1;
+}
+
+form {
+    max-width: 550px;
+    width: 90%;
+    background: var(--light-purple);
+    margin: 5em auto 1em auto;
+    padding: 1em;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form label {
+    display: block;
+    margin: 1em 0;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid var(--dark-purple) ;
+}
+
+#contactUS {
+    margin: 0;
+    text-align: center;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-bottom: 2px solid var(--dark-purple);
+}
+
+.submitButton {
+    text-align: center;
+}
+
+input[type="submit"] {
+    margin-top: 2em;
+    width: 90%;
+    max-width: 200px;
+    font-size: 1em;
+    color: var(--light-purple);
+    cursor: pointer;
+    background: var(--dark-purple);
+    border-radius: 5px;
+}
+
+.err {
+    color: var(--err-purple);
+}
+
+.err-border {
+    border-bottom: 1px solid var(--err-purple);
+}
+
+#success {
+    color : var(--dark-purple);
+}
