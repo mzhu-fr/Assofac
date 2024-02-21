@@ -1,7 +1,3 @@
-main {
-    margin-top: 20%;
-}
-
 #bodyDice {
     background-color: var(--dark-blue);
 }
@@ -18,7 +14,7 @@ main {
 /* THE FORM TO FILL PLAYER NAME */
 .formPlayerName {
     z-index: 1999;
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +28,29 @@ main {
     background-color: var(--dice-text-color);
     font-size: 3em;
     padding: 5px;
+}
+
+.inbox-text{
+    font-size: 12px;
+}
+
+.player-name-inbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: initial;
+}
+
+.overlay-player-name{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1999;
+    display: initial;
 }
 
 .formPlayerName label {

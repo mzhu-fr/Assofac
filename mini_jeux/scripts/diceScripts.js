@@ -12,6 +12,8 @@ var playerName = [];
 var getName = [document.getElementsByClassName('inputPlayerName')[0], document.getElementsByClassName('inputPlayerName')[1]];
 var displayName = [document.getElementsByClassName('playerNameDisplay')[0], document.getElementsByClassName('playerNameDisplay')[1]];
 var formName = document.getElementsByClassName('formPlayerName')[0];
+var overlayName = document.getElementsByClassName('overlay-player-name')[0];
+var forNameInbox = document.getElementsByClassName('player-name-inbox')[0];
 
 var showWhoStart = [document.getElementsByClassName('playerStart')[0], document.getElementsByClassName('playerStart')[1]];
 
@@ -59,6 +61,8 @@ function getPlayerName() {
     displayName[0].innerText = playerName[0];
     displayName[1].innerText = playerName[1];
     formName.style.display = 'none';
+    forNameInbox.style.display = 'none';
+    overlayName.style.display = 'none';
 }
 
 // INITIALISE THE GAME TO ZERO
