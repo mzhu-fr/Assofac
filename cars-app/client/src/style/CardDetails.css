@@ -1,0 +1,143 @@
+/* Styles pour la page de détails de la voiture */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
+
+.details {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+.details h2 {
+  font-size: 2em;
+  color: #333;
+  font-family: 'Bebas Neue',sans-serif ;
+}
+
+.details p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+  font-family: 'Autour One',sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo2 {
+  width: 10%; 
+
+}
+
+.img-logo2 {
+  width: 100%;
+}
+
+.contenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image{
+  width: 50%;
+ 
+}
+
+.image img{
+  width: 100%; border: none;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgb(14, 14, 14);
+}
+
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.info-descri{
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.sous-info{
+  color: blue;
+}
+.title2 h2{
+  font-size: 2em;
+}
+
+.contenu-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #992edc;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title2{
+  font-size: 1.5em;
+  padding: 3%;
+}
+.video-dt{
+  width: 70%;
+  height: 725px;
+}
+
+.navigation {
+
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+
+.home-button,
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  margin-bottom: 2%;
+}
+
+
+@media (max-width:760px) {
+
+ 
+  .contenu {
+   flex-direction:column;
+   align-items: center;
+  }
+  
+
+  .video-dt{
+    height: 199px;
+  }
+
+ 
+  
+}

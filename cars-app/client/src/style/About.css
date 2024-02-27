@@ -1,0 +1,208 @@
+/* App.css (ou tout autre nom de fichier CSS de votre choix) */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+h1 ,h2,h3,h4,h5{
+    font-family: 'Bebas Neue',sans-serif ;
+}  
+p{
+    font-family: 'Autour One',sans-serif;
+    
+}
+
+.contenaire-about{
+  width: 100%;
+   display: flex;
+    justify-content: center;
+  align-items: center;
+  background-color: #391e3f;
+  gap: 15%;
+}
+.about {
+  margin: 100px;
+   font-size: 2em;
+  color: gold;
+  text-shadow: 1px 3px 2px #000000;
+  text-align: center;
+}
+
+.contenaire-about a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 0%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    gold,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/*Card*/
+.card-pro {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.front,
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0px #665c22;
+}
+
+/*Front Face*/
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(
+    129deg,
+    rgba(0, 0, 0, 1) 38%,
+    rgba(255, 255, 255, 1) 66%,
+    rgba(255, 255, 255, 1) 69%,
+    rgba(0, 0, 0, 1) 80%
+  );
+  background-size: 250% 100%;
+  z-index: 1;
+}
+
+.front img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.front .mel img{
+  width: 50%;
+}
+
+.front h2 {
+  font-weight: normal;
+  font-size: 3em;
+  text-shadow: 2px 4px 2px #893c01;
+  color: gold;
+}
+
+.star {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  width: 11%;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/*Back Face*/
+.back {
+  background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 200% 100%;
+  text-align: center;
+ 
+}
+
+.container-info {
+  padding: 5px 0;
+  color: #ffca38;
+  text-shadow: 1px 3px 2px #000000;
+  margin-top: -10%;
+ 
+
+}
+.starwars {
+  font-size: 0.65em;
+  text-align: center;
+}
+
+h2,
+h3 {
+  
+  font-weight: normal;
+  font-family:  'Bebas Neue',sans-serif ; ;
+}
+.jedi{
+  padding-top: 3%;
+  font-size: 3em;
+  color: white;
+}
+
+
+
+
+/*Transition Config*/
+.front,
+.back,
+.star,
+hr,
+.container-info {
+  transition: all 0.5s ease-in-out;
+}
+
+/*Hover Transition*/
+.card-pro:hover .front {
+  transform: translateY(-70%);
+  background-position: right;
+}
+
+.card-pro:hover .star {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+.card-pro:hover .back {
+  transform: scale(1.5);
+  background-position: center center;
+}
+
+.card-pro:hover .container-info {
+  transform: translateY(100%);
+  backdrop-filter: blur(5px);
+}
+
+.card-pro:hover hr {
+  transition-delay: 0.3s;
+  width: 90%;
+}
+
+@media (max-width:760px) {
+  .contenaire-about {
+    flex-direction: column;
+}
+.card-pro {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+.front h2 {
+  font-weight: normal;
+  font-size: 1.5em;
+ 
+  text-shadow: 2px 4px 2px #893c01;
+  color: gold;
+}
+.container-info p{
+  font-size: 0.8em;
+
+}
+.back {
+ 
+  background-size: 100% 500%;
+  text-align: center;
+ 
+}
+}

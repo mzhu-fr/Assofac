@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
+/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    font-family: 'Autour One', sans-serif;
+}
+
+
+.logo-book {
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.burger-menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+.navbar-links .panier:hover {
+    color: white;
+    /* background-color: black; */
+}
+
+.navbar {
+    padding: 1%;
+    background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
+}
+
+.navbar.color>div>a>img {
+    width: 95px;
+    height: 95px;
+    border: none;
+    border-radius: 50%;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar-links {
+    padding-left: 10px;
+    font-size: 1.5em;
+    color: black;
+    text-transform: uppercase;
+}
+
+.sidebar {
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-close {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.sidebar-links-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-link {
+    color: var(--bleu-fonce);
+    text-transform: uppercase;
+}
+
+.sidebar-link:hover {
+    color: var(--vert-fonce);
+    transform: scale(1.10);
+}
+
+#display-sidebar {
+    transform: translateX(0);
+    transition: 0.5s;
+    background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#hide-sidebar {
+    transform: translateX(100vw);
+    transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .burger-menu {
+        display: initial;
+    }
+
+    .navbar-content {
+        display: none;
+    }
+}

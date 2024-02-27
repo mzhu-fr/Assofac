@@ -1,0 +1,60 @@
+/* Importation des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
+/* Styles généraux pour les titres et paragraphes */
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+p {
+    font-family: 'Autour One', sans-serif;
+}
+
+/* Styles pour le footer */
+footer {
+    color: #fff;
+    background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    /*border-top-left-radius: 70px;*/
+    padding: 2%;
+}
+
+.footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 50px;
+}
+
+.link-des {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.link-des a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.link-des a:hover {
+    color: #FB2576;
+    transition: linear 0.3s;
+}
+
+
+/* Styles pour le texte de copyright */
+.copyright {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styles responsives  */
+@media (max-width: 760px) {
+    /* Ajoutez  */
+}
+
