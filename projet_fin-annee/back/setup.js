@@ -3,6 +3,8 @@ import cors from 'cors'
 import express from 'express'
 import {config} from 'dotenv'
 import cookieParser from 'cookie-parser'
+import authentification from './routes/r-authentification.js'
+import userData from './routes/r-user.js'
 
 config();
 
@@ -30,6 +32,9 @@ export function createDB(port) {
         res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.send({ "msg": "This has CORS enabled 🎈" });
     });
+
+    app.use('/auth', authentification) // create - login - logout
+    app.use('/user-data', userData) // read - udpdate - delete regular&superAdmin
 
     app.listen(port, () => {
         console.log("Backend started at port :", port)

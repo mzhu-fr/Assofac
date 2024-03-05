@@ -91,3 +91,12 @@ ADD COLUMN `datesold` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `idcmd`;
 ALTER TABLE `e-rigation`.`historic_command` 
 ADD COLUMN `date_order` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `iduser`;
 
+ALTER TABLE `e-rigation`.`user` 
+CHANGE COLUMN `code-postal` `code_postal` VARCHAR(10) NOT NULL ;
+
+
+-- INSERT FIRST USER INTO TABLE
+
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Zhu', 'Melanie', '14 rue de la beaune', 'Assofac', '93100', 'Montreuil', '0123456789', 'Sadmin', 'monemail@melanie.zhu', '$2a$10$hVtFN5.Qha8u2y5v2zDB5u8Ii0T8LmMrgA/SgGHI1qZwcYM9pTy4q');
+
+
