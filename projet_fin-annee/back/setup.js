@@ -3,8 +3,12 @@ import cors from 'cors'
 import express from 'express'
 import {config} from 'dotenv'
 import cookieParser from 'cookie-parser'
+
+// ROUTES
 import authentification from './routes/r-authentification.js'
 import userData from './routes/r-user.js'
+import productCable from './routes/r-product-cable.js'
+import comments from './routes/r-comments.js'
 
 config();
 
@@ -35,6 +39,8 @@ export function createDB(port) {
 
     app.use('/auth', authentification) // create - login - logout
     app.use('/user-data', userData) // read - udpdate - delete regular&superAdmin
+    app.use('/product-cable', productCable)
+    app.use('/comments', comments)
 
     app.listen(port, () => {
         console.log("Backend started at port :", port)

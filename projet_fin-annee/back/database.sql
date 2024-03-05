@@ -94,9 +94,23 @@ ADD COLUMN `date_order` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP AFTER `iduser`;
 ALTER TABLE `e-rigation`.`user` 
 CHANGE COLUMN `code-postal` `code_postal` VARCHAR(10) NOT NULL ;
 
+ALTER TABLE `e-rigation`.`product-cable` 
+CHANGE COLUMN `entree-type` `entree_type` VARCHAR(45) NOT NULL ;
+
+ALTER TABLE `e-rigation`.`product-cable` 
+ADD COLUMN `image` VARCHAR(500) NOT NULL AFTER `vitesse`;
+
+ALTER TABLE `e-rigation`.`historic_command` 
+ADD COLUMN `status` VARCHAR(45) NULL DEFAULT 'PAID' AFTER `iduser`;
+
+
 
 -- INSERT FIRST USER INTO TABLE
 
 INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Zhu', 'Melanie', '14 rue de la beaune', 'Assofac', '93100', 'Montreuil', '0123456789', 'Sadmin', 'monemail@melanie.zhu', '$2a$10$hVtFN5.Qha8u2y5v2zDB5u8Ii0T8LmMrgA/SgGHI1qZwcYM9pTy4q');
 
 
+
+-- INSERT FIRST ITEM INTO TABLE
+
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, 'image') VALUES ('123-4578', 'USBC-C', '150', '3', '0.3', 'BLEU', 'C', 'C', '14.99', '2.0', 'none');
