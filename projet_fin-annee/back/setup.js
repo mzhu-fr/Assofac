@@ -1,7 +1,7 @@
 import mysql from 'mysql2'
 import cors from 'cors'
 import express from 'express'
-import {config} from 'dotenv'
+import { config } from 'dotenv'
 import cookieParser from 'cookie-parser'
 
 // ROUTES
@@ -9,6 +9,7 @@ import authentification from './routes/r-authentification.js'
 import userData from './routes/r-user.js'
 import productCable from './routes/r-product-cable.js'
 import comments from './routes/r-comments.js'
+import commands from './routes/r-command.js'
 
 config();
 
@@ -16,7 +17,7 @@ export const db = mysql.createConnection({
     host: process.env.REACT_APP_HOST,
     user: process.env.REACT_APP_USER,
     password: process.env.REACT_APP_PASSWORD,
-    database:process.env.REACT_APP_DATABASE
+    database: process.env.REACT_APP_DATABASE
 })
 
 db.connect(function (err) {
@@ -41,6 +42,7 @@ export function createDB(port) {
     app.use('/user-data', userData) // read - udpdate - delete regular&superAdmin
     app.use('/product-cable', productCable)
     app.use('/comments', comments)
+    app.use('/commands', commands)
 
     app.listen(port, () => {
         console.log("Backend started at port :", port)

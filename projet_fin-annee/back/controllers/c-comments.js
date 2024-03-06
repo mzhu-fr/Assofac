@@ -30,6 +30,15 @@ export const showBestComment = (req, res) => {
     })
 }
 
+export const showProductComment = (req, res) => {
+    const q = 'SELECT * FROM `e-rigation`.`comments` WHERE idproduct =? '
+    db.query(q, req.params.idprod, (err, data) => {
+        if(err) return(res.status(400).json(err))
+        return(res.status(200).json(data))
+    })
+
+}
+
 export const updateComment = (req, res) => {
     const comment = [
         req.body.message,
