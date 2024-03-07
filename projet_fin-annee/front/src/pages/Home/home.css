@@ -1,0 +1,49 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.voir-produits,
+.apprendre-plus,
+.box-commentaire {
+    width: 100vw;
+    height: 100vh;
+}
+
+.voir-produits {
+    background-image: url('../../general/voir_produits.jpg');
+    background-size: cover;
+}
+
+.apprendre-plus {
+    background-image: url('../../general/apprendre-plus.jpg');
+    background-size: cover;
+}
+
+.button{
+    color: var(--off-white);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1%;
+    border-radius: 25px;
+    font-size: 2em;
+}
+
+.button:hover {
+    background-color: var(--off-white);
+    color:var(--dark)
+}
+
+.voir-produits,
+.apprendre-plus {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.box-commentaires h3 {
+    text-align: center;
+    font-size:2.6em;
+}

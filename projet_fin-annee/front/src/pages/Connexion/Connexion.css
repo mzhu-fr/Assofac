@@ -1,0 +1,25 @@
+.connexion {
+    display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+}
+
+.login-register {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    background-color: var(--off-white);
+}
+
+.active {
+    background-color: var(--dark);
+    color: var(--off-white);
+}
+
+.login-register-h2 {
+    padding: 1em;
+    /* background-color: var(--dark); */
+    width: 100%;
+    text-align: center;
+}

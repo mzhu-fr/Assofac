@@ -1,0 +1,28 @@
+.all-comments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding : 1em;
+    
+    /* height: 100vh; */
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding : 0.5em;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px var(--dark);
+
+    width: 200px;
+}
+
+.comment h5 {
+    font-weight: bold;
+}
+
+.comment p {
+    font-size: 11px;
+}

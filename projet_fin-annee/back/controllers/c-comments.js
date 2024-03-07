@@ -8,33 +8,33 @@ export const createComment = (req, res) => {
         req.body.note
     ]
     const q = 'INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES (?)'
-    db.query(q, [comment], (err, data) =>{
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json("Comment created."))
+    db.query(q, [comment], (err, data) => {
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json("Comment created."))
     })
 }
 
 export const showUserComment = (req, res) => {
     const q = 'SELECT * FROM `e-rigation`.`comments` WHERE iduser =?'
     db.query(q, req.params.iduser, (err, data) => {
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json(data))
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json(data))
     })
 }
 
 export const showBestComment = (req, res) => {
-    const q = 'SELECT * FROM `e-rigation`.`comments` WHERE note > 8 LIMIT 5'
+    const q = 'SELECT idcomments, message, note, prenom FROM `e-rigation`.`comments` LEFT JOIN `e-rigation`.`user` ON `comments`.`iduser` = `user`.`iduser` WHERE note >= 8 ORDER BY idcomments DESC LIMIT 5'
     db.query(q, req.params.iduser, (err, data) => {
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json(data))
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json(data))
     })
 }
 
 export const showProductComment = (req, res) => {
     const q = 'SELECT * FROM `e-rigation`.`comments` WHERE idproduct =? '
     db.query(q, req.params.idprod, (err, data) => {
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json(data))
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json(data))
     })
 
 }
@@ -47,15 +47,15 @@ export const updateComment = (req, res) => {
     ]
     const q = 'UPDATE `e-rigation`.`comments` SET message=?, note = ? WHERE idcomments=?'
     db.query(q, [...comment], (err, data) => {
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json("Comment updated."))
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json("Comment updated."))
     })
 }
 
 export const deleteComment = (req, res) => {
     const q = 'DELETE FROM `e-rigation`.`comments` WHERE idcomments=?'
     db.query(q, req.params.idcom, (err, data) => {
-        if(err) return(res.status(400).json(err))
-        return(res.status(200).json("Comment deleted."))
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json("Comment deleted."))
     })
 }

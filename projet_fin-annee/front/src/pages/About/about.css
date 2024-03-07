@@ -1,0 +1,18 @@
+.about,
+.introduction,
+.info-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding:1em;
+}
+
+.about h1,
+.info-contact h2 {
+    text-align: center;
+}
+
+.about p {
+    text-align: justify;
+}

@@ -1,0 +1,29 @@
+.user-profile {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile table {
+    padding: 1em;
+    width: 70%;
+}
+
+.modify-profil-form,
+.profil-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.modify-profil-form {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modify-profil-form label {
+    font-weight: bold;
+}

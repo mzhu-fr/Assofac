@@ -7,14 +7,8 @@ export const AuthContextProvider = ({ children }) => {
 
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")) || null);
 
-    const userLogin = async (inputs) => {
-        const res = await fetch("http://localhost:8800/auth/login", {
-            method : "POST",
-            body: JSON.stringify(inputs),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+    const login = async (inputs) => {
+        const res = await axios.post("http://localhost:8800/auth/login", inputs);
         setCurrentUser(res.data)
     }
 
@@ -27,7 +21,8 @@ export const AuthContextProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem("user", JSON.stringify(currentUser));
     }, [currentUser])
+
     return (
-        <AuthContext.Provider value={{ userLogin, logout, currentUser }}> {children} </AuthContext.Provider>
+        <AuthContext.Provider value={{ login, logout, currentUser }}> {children} </AuthContext.Provider>
     )
 }

@@ -12,8 +12,8 @@ export const Sidebar = () => {
         console.log("close sidebar")
         dispatch(hideSidebar());
     }
-  return (
-    <div className="sidebar" id={sidebar ? "display-sidebar" : "hide-sidebar"}>
+    return (
+        <div className="sidebar" id={sidebar ? "display-sidebar" : "hide-sidebar"}>
             <div className="close-sidebar">
                 <AiFillCloseSquare onClick={() => { handleClick() }} />
             </div>
@@ -21,5 +21,5 @@ export const Sidebar = () => {
                 <NavbarContent />
             </div>
         </div>
-  )
+    )
 }

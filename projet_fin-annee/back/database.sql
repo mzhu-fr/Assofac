@@ -103,6 +103,12 @@ ADD COLUMN `image` VARCHAR(500) NOT NULL AFTER `vitesse`;
 ALTER TABLE `e-rigation`.`historic_command` 
 ADD COLUMN `status` VARCHAR(45) NULL DEFAULT 'PAID' AFTER `iduser`;
 
+ALTER TABLE `e-rigation`.`comments` 
+ADD UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC) VISIBLE,
+ADD UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC) VISIBLE;
+;
+
+
 
 
 -- INSERT FIRST USER INTO TABLE
@@ -114,3 +120,7 @@ INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse
 -- INSERT FIRST ITEM INTO TABLE
 
 INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, 'image') VALUES ('123-4578', 'USBC-C', '150', '3', '0.3', 'BLEU', 'C', 'C', '14.99', '2.0', 'none');
+
+-- INSERT COMMENTS
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '3', 'Super nice cable lol', '10');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '1', 'Il a cassé mais le service client a été réactif', '8');

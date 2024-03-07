@@ -7,11 +7,11 @@ import { FaXTwitter } from "react-icons/fa6"
 
 export const Footer = () => {
   return (
-    <div class="footer">
-      <div class="copyrights">
-        <h7>Copyrights by Mélanie ZHU | Projet fin d'année | Assofac</h7>
+    <div className="footer">
+      <div className="copyrights">
+        <h6>Copyrights by Mélanie ZHU | Projet fin d'année | Assofac</h6>
       </div >
-      <div class="reseaux-sociaux">
+      <div className="reseaux-sociaux">
         <p><FaInstagram /> <FaGripLinesVertical /> <FaFacebook /> <FaGripLinesVertical /> <FaXTwitter /></p>
       </div>
     </div >
