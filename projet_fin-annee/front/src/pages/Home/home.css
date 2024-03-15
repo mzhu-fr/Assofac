@@ -13,12 +13,12 @@
 }
 
 .voir-produits {
-    background-image: url('../../general/voir_produits.jpg');
+    background-image: url('../../asset-images/voir-produits.jpg');
     background-size: cover;
 }
 
 .apprendre-plus {
-    background-image: url('../../general/apprendre-plus.jpg');
+    background-image: url('../../asset-images/apprendre-plus.jpg');
     background-size: cover;
 }
 

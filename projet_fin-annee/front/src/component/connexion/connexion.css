@@ -26,3 +26,15 @@ form {
     box-shadow: 1px 1px 1px 1px var(--dark);
     border-radius: 5px;
 }
+
+@media (max-width:1200px) {
+    .section-form{
+        display: flex;
+
+        flex-direction: column;
+    }
+    .register-form{
+        font-size: 11px;
+    }
+
+}

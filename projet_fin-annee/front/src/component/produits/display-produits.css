@@ -1,0 +1,37 @@
+.display-product-cable {
+    display: flex;
+
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+
+    
+}
+
+.display-product-card {
+    display: flex;
+    
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+    
+    /* background-color: var(--grey); */
+}
+
+.display-one-product-image {
+    width: auto;
+    height: 200px;
+}
+
+@media (max-width:1200px) {
+    .display-product-cable {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

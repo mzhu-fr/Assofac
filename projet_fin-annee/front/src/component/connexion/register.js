@@ -87,7 +87,7 @@ export const Register = () => {
             }
         }
     }
-    // console.log(user)
+    console.log(user)
     return (
         <div className="register-form">
             <p>{message ? <>{message}</> : ""}</p>
@@ -95,52 +95,52 @@ export const Register = () => {
                 <div className="section-form">
                     <div className="part">
                         <label>Nom :</label>
-                        <input placeholder="Nom" name="nom" value={user.nom} type="text" onChange={handleChange} />
+                        <input placeholder="Nom" name="nom" value={user.nom} type="text" onChange={handleChange} required />
                     </div>
                     <div className="part">
                         <label>Prénom :</label>
-                        <input placeholder="Prénom" name="prenom" value={user.prenom} type="text" onChange={handleChange} />
+                        <input placeholder="Prénom" name="prenom" value={user.prenom} type="text" onChange={handleChange} required />
                     </div>
                 </div>
                 <div className="section-form">
                     <div className="part">
                         <label>Adresse :</label>
-                        <input placeholder="Adresse" name="adresse" value={user.adresse} type="text" onChange={handleChange} />
+                        <input placeholder="Adresse" name="adresse" value={user.adresse} type="text" onChange={handleChange} required />
                     </div>
                     <div className="part">
                         <label>Complément d'adresse :</label>
-                        <input placeholder="Complément d'adresse" name="complement_adresse" value={user.complement_adresse} type="text" onChange={handleChange} />
+                        <input placeholder="Complément d'adresse" name="complement_adresse" value={user.complement_adresse} type="text" onChange={handleChange} required />
                     </div>
                 </div>
                 <div className="section-form">
                     <div className="part">
                         <label>Code postal :</label>
-                        <input placeholder="Code postal" name="code_postal" value={user.code_postal} type="text" onChange={handleChange} />
+                        <input placeholder="Code postal" name="code_postal" value={user.code_postal} type="text" onChange={handleChange} required />
                     </div>
                     <div className="part">
                         <label>Ville :</label>
-                        <input placeholder="Ville" name="ville" value={user.ville} type="text" onChange={handleChange} />
+                        <input placeholder="Ville" name="ville" value={user.ville} type="text" onChange={handleChange} required />
                     </div>
                 </div>
                 <div className="section-form">
                     <div className="part">
                         <label>Email :</label>
-                        <input placeholder="Email" name="email" value={user.email} type="email" onChange={handleChange} />
+                        <input placeholder="Email" name="email" value={user.email} type="email" onChange={handleChange} required />
                     </div>
                     <div className="part">
                         <label>Numéro de téléphone :</label>
-                        <input placeholder="N° de téléphone" name="telephone" value={user.telephone} type="text" onChange={handleChange} />
+                        <input placeholder="N° de téléphone" name="telephone" value={user.telephone} type="text" onChange={handleChange} required />
                     </div>
                 </div>
                 <div className="section-form">
                     <div className="part">
                         <label>Mot de passe :</label>
-                        <input placeholder="Mot de passe" name="comparePassword" value={user.comparePassword} type="password" onChange={handleComparePassword} />
+                        <input placeholder="Mot de passe" name="comparePassword" defaultValue={user.comparePassword} type="password" onChange={handleComparePassword} />
                     </div>
 
                     <div className="part">
                         <label>Confirmez le mot de passe :</label>
-                        <input placeholder="Reconfirmez le mot de passe" name="password" value={user.password} type="password" onChange={handleChange} />
+                        <input placeholder="Reconfirmez le mot de passe" name="password" value={user.password} type="password" onChange={handleChange} required />
                     </div>
                 </div>
                 <button onClick={handleSubmit}>Valider</button>

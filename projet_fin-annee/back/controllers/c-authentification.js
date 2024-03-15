@@ -12,7 +12,7 @@ export const register = (req, res) => {
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(req.body.password, salt);
         const q = 'INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `email`, `password`) VALUES (?)'
-        var user = [
+        const user = [
             req.body.nom,
             req.body.prenom,
             req.body.adresse,
@@ -44,9 +44,10 @@ export const login = (req, res) => {
 
         const { password, ...other } = data[0]
         const token = jwt.sign({ id: data[0].iduser }, "jwtkey");
+        const response = { ...other, authToken: token }
         res.cookie("login_token", token, {
             httpOnly: true
-        }).status(200).json(other)
+        }).status(200).json(response)
     })
 }
 
@@ -69,8 +70,15 @@ export const allUserExceptAdmin = (req, res) => {
 }
 
 export const superAdmin = (req, res) => {
-    const q = "SELECT * FROM `e-rigation`.`user`"
-    db.query(q, (err, data) => {
+    const q = "SELECT * FROM `e-rigation`.`user` WHERE iduser != ?"
+    db.query(q, req.params.id, (err, data) => {
+        if (err) return (res.status(400).json(err))
+        return (res.status(200).json(data))
+    })
+}
+export const showallExceptUser = (req, res) => {
+    const q = 'SELECT * FROM `e-rigation`.`user` WHERE role != ?'
+    db.query(q, "user", (err, data) => {
         if (err) return (res.status(400).json(err))
         return (res.status(200).json(data))
     })
@@ -99,18 +107,10 @@ export const updateUser = (req, res) => {
 
 export const superAdminUpdateUser = (req, res) => {
     const user = [
-        req.body.nom,
-        req.body.prenom,
-        req.body.adresse,
-        req.body.complement_adresse,
-        req.body.code_postal,
-        req.body.ville,
-        req.body.telephone,
-        req.body.email,
-        req.body.role,
+        req.params.role,
         req.params.id
     ]
-    const q = 'UPDATE `e-rigation`.`user` SET nom=?, prenom=?, adresse=?, complement_adresse=?, code_postal=?, ville=?, telephone=?, email=?, role=? WHERE iduser=?'
+    const q = 'UPDATE `e-rigation`.`user` SET role=? WHERE iduser=?'
     db.query(q, [...user], (err, data) => {
         if (err) return (res.status(400).json(err))
         return (res.status(200).json("Profile updated by Super Admin."))

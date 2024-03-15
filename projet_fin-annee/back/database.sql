@@ -115,12 +115,33 @@ ADD UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC) VISIBLE;
 
 INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Zhu', 'Melanie', '14 rue de la beaune', 'Assofac', '93100', 'Montreuil', '0123456789', 'Sadmin', 'monemail@melanie.zhu', '$2a$10$hVtFN5.Qha8u2y5v2zDB5u8Ii0T8LmMrgA/SgGHI1qZwcYM9pTy4q');
 
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('PIEUVRE', 'Ursula', '1 Rue Mathis', '92220', 'Gennevilliers', '0612345678', 'user', 'ursula@pieuvre.fr', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Jean', 'Tom', '19 rue Julien', '75019', 'PARIS', '0620304050', 'user', 'tom@jean.fr', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Papa', 'Dopoulos', '1 rue Rien', '95000', 'Argentuil', '0789654323', 'user', 'dopoulos@papa.fr', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Théquin', 'Pigeon', '1 rue de la Blague', 'PAHISI', '93100', 'Montreuil', '0777777777', 'user', 'pigeon@théquin.fr', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Snee', 'Quers', '298 rue du gros', '31000', 'NULPART', '0788888888', 'user', 'quers@snee.fr', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
+INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `role`, `email`, `password`) VALUES ('Dédieu', 'Caprice', '190 rue du fromage', 'Ferme Dedieu', '12333', 'Pré', '0799999999', 'user', 'caprice@dédieu.com', '$2a$10$Q/hap0v5roKaj6UrIiRIr.bq3zqoV1.tM8SSGmivCVfmuQ/IKyvue');
 
 
 -- INSERT FIRST ITEM INTO TABLE
 
 INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, 'image') VALUES ('123-4578', 'USBC-C', '150', '3', '0.3', 'BLEU', 'C', 'C', '14.99', '2.0', 'none');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11122-1', 'USBC-V', '120', '1', '0.1', 'VERT', 'C', 'USB', '25.99', '3.0', 'https://media.startech.com/cms/products/gallery_large/usbaubxmgn.main.jpg');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11122-2', 'USBC-R', '200', '2', '0.2', 'ROUGE', 'C', 'USB', '35.99', '3.0', 'https://dxbyzx5id4chj.cloudfront.net/fit-in/700x700/filters:fill(fff)/pub/media/catalog/product/c/d/cd183d04_a641_49e7_89a5_ae1cbb42f01c_c623.jpg');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11123-1', 'USBM-N', '500', '1', '0.1', 'NOIR', 'MICRO', 'USB', '10.99', '2.0', 'https://www.mbtech.fr/38691-thickbox_default/cable-usb-a-micro-usb-noir-1m-.jpg');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11123-2', 'USBM-B', '100', '3', '0.3', 'BLEU', 'MICRO', 'USB', '8.99', '2.0', 'https://media.startech.com/cms/products/gallery_large/usbaubxmbl.main.jpg');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11124-1', 'USBL-V', '666', '3', '0.3', 'VIOLET', 'LIGHTNING', 'USB', '12.99', '3.0', 'https://www.cdiscount.com/pdt2/7/4/9/1/700x700/auc9124892917749/rw/cable-de-donnees-de-charge-cable-violet-pour-appl.jpg');
+INSERT INTO `e-rigation`.`product-cable` (`SKU`, `reference`, `quantite`, `longueur`, `poids`, `couleur`, `type`, `entree_type`, `prix`, `vitesse`, `image`) VALUES ('11124-2', 'USB-R', '300', '2', '0.2', 'ROSE', 'LIGHTNING', 'USB', '14.99', '3.0', 'https://www.sbsmobile.com/fra/190819-thickbox_default/cable-de-donnees-apple-lightning-gold-collection.jpg');
 
--- INSERT COMMENTS
-INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '3', 'Super nice cable lol', '10');
-INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '1', 'Il a cassé mais le service client a été réactif', '8');
+
+-- INSERT COMMENT
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '18', 'A', '8');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '19', 'B', '9');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '20', 'C', '6');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '21', 'D', '9');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '22', 'E', '8');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('2', '23', 'F', '9');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('11', '18', 'G', '7');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('11', '20', 'H', '7');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('11', '22', 'I', '0');
+INSERT INTO `e-rigation`.`comments` (`iduser`, `idproduct`, `message`, `note`) VALUES ('11', '23', 'J', '8');

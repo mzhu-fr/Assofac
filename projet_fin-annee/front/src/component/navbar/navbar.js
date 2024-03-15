@@ -1,7 +1,7 @@
 import React from "react";
 import { NavbarContent } from "./navbar-content";
 import { Link } from "react-router-dom";
-import Logo from "../../general/logo.png";
+import Logo from "../../asset-images/logo.png";
 import { useDispatch } from "react-redux";
 import { showSidebar } from "../../redux-store/actions/sidebar-action";
 import { CgMenuGridR } from "react-icons/cg";

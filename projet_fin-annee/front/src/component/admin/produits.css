@@ -1,0 +1,51 @@
+.addProd {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.user-display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+}
+
+.user-card {
+    padding: 1em;
+    width: 50%;
+}
+
+.toUser {
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+.toAdmin{
+    background-color: var(--grey);
+    color:var(--white)
+}
+
+.toSuperAdmin{
+    background-color: var(--dark);
+    color:var(--white)
+}
+
+.update-role-bold {
+    font-weight: bold;
+}
+
+@media (max-width:1200px) {
+    .user-card {
+        padding: 1em;
+        font-size: 11px;
+    }
+    .user-display{
+        flex-direction: column;
+        padding: 1em;
+    }
+}

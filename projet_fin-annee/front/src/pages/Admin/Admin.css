@@ -1,0 +1,16 @@
+.admin-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-update-ect {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.add-update {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+}
