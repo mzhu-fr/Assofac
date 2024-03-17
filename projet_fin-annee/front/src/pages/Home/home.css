@@ -13,7 +13,7 @@
 }
 
 .voir-produits {
-    background-image: url('../../asset-images/voir-produits.jpg');
+    background-image: url('../../asset-images/voir_produits.jpg');
     background-size: cover;
 }
 
@@ -46,4 +46,18 @@
 .box-commentaires h3 {
     text-align: center;
     font-size:2.6em;
+}
+
+@media (max-width:1200px) {
+    .voir-produits {
+        /* background-image: url('../../asset-images/image-mobile-apprendre.jpg'); */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .apprendre-plus {
+        background-image: url('../../asset-images/apprendre-plus.jpg');
+        /* background-size: contain; */
+        background-position: center;
+    }
 }

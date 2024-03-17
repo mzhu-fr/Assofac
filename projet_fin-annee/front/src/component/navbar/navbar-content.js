@@ -27,6 +27,7 @@ export const NavbarContent = () => {
       <Link to="/" onClick={handleCloseSidebar}>Accueil</Link>
       <Link to="/produits" onClick={handleCloseSidebar}>Produits</Link>
       <Link to="/a-propos" onClick={handleCloseSidebar}>A propos</Link>
+      <Link to="/panier" onClick={handleCloseSidebar}>Panier</Link>
       {currentUser ? "" : <Link to="/connexion" onClick={handleCloseSidebar}>Se connecter</Link>}
 
       {currentUser ? <Link to="/profil" onClick={handleCloseSidebar}>Profil</Link> : ""}

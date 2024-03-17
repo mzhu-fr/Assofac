@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './connexion.css'
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,}$/i;
-const passwordRegex = /^[a-zA-Z0-9]{6,}$/;
+const passwordRegex = /^[a-zA-Z0-9]{6,12}$/;
 const phoneRegex = /^0[67][0-9]{8}$/
 const codePostRegex = /^[0-9]{5}$/
 
@@ -31,27 +31,27 @@ export const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if ((user.password || user.nom || user.email || user.prenom) < 1) {
-            setMessage("Fields cannot be blank.");
+            setMessage("Il faut remplir tous les champs.");
             return;
         }
         if (user.password !== comparePassword) {
-            setMessage("Password is not matching")
+            setMessage("Le mot de passe n'est pas identique.")
             return;
         }
         if (!codePostRegex.test(user.code_postal)) {
-            setMessage("Please use a valid post code format.");
+            setMessage("Utilisez un format de code postal valide.");
             return;
         }
         if (!phoneRegex.test(user.telephone)) {
-            setMessage("Please use a valid phone format.");
+            setMessage("Utilisez un numéro de téléphone portable valide.");
             return;
         }
         if (!emailRegex.test(user.email)) {
-            setMessage("Please use a valid email adress format.");
+            setMessage("Le format de votre adresse email n'est pas correct.");
             return;
         }
         if (!passwordRegex.test(user.password)) {
-            setMessage("Password is minimum 6 characters.");
+            setMessage("Le mot de passe doit être compris entre 6 et 12 charactères.");
             return;
         }
         else {

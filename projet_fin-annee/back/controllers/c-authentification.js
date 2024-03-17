@@ -44,10 +44,10 @@ export const login = (req, res) => {
 
         const { password, ...other } = data[0]
         const token = jwt.sign({ id: data[0].iduser }, "jwtkey");
-        const response = { ...other, authToken: token }
+        // const response = { ...other, authToken: token }
         res.cookie("login_token", token, {
             httpOnly: true
-        }).status(200).json(response)
+        }).status(200).json(other)
     })
 }
 

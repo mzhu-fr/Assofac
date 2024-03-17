@@ -8,7 +8,7 @@ export const UpdateRole = () => {
     const { currentUser } = useContext(AuthContext)
     const [users, setUsers] = useState()
     const [message, setMessage] = useState()
-    var a = 0
+    const password = { password: "123456" }
     useEffect(() => {
         const getData = async () => {
             try {
@@ -19,12 +19,9 @@ export const UpdateRole = () => {
             }
         }
         getData()
-    }, [a])
+    }, [])
 
     if (currentUser && currentUser.role === "SAdmin") {
-        a += 1
-        // console.log(a)
-        // console.log(users)
         const handleRefresh = () => {
             window.location.reload()
         }
@@ -52,6 +49,15 @@ export const UpdateRole = () => {
                 setMessage(err)
             }
         }
+        const handleNewPassword = async (id) => {
+            try {
+                await axios.put("http://localhost:8800/user-data/users-psswd/" + id, password)
+                alert("Mot de passe modifié pour l'utilisateur.")
+                window.location.reload()
+            } catch (err) {
+                alert("Erreur lors du changement du mot de passe.")
+            }
+        }
         return (
             <div className='user-display'>
                 {message ? <p>{message}</p> : ""}
@@ -74,6 +80,7 @@ export const UpdateRole = () => {
                             <button className="toUser" onClick={() => handleToUser(user.iduser)}>User</button>
                             <button className="toAdmin" onClick={() => handleToAdmin(user.iduser)}>Admin</button>
                             <button className="toSuperAdmin" onClick={() => handleToSAdmin(user.iduser)}>S-Admin</button>
+                            <button className="forgot-password" onClick={() => handleNewPassword(user.iduser)}>Modifier MdP</button>
                         </div>
                     </div>
                 )) : ""}

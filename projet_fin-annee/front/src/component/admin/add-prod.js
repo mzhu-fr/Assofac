@@ -25,21 +25,19 @@ export const AddProd = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        if ((inputs.SKU || inputs.reference || inputs.quantite || inputs.longueur || inputs.poids || inputs.couleur || inputs.tpe || inputs.entree_type || inputs.prix || inputs.vitesse || inputs.image) > 1) {
+        if ((inputs.SKU || inputs.reference || inputs.quantite || inputs.longueur || inputs.poids || inputs.couleur || inputs.type || inputs.entree_type || inputs.prix || inputs.vitesse || inputs.image) < 0) {
             setMessage("Remplir tous les champs.")
             return
         }
         else {
             try {
-                // console.log("Add prod log")
-                const res = await axios.post("http://localhost:8800/product-cable/cable", inputs)
+                await axios.post("http://localhost:8800/product-cable/cable", inputs)
                 setMessage("Produit ajouté.")
-                // console.log(res)
             }
             catch (err) {
                 setMessage(err.response.data)
-                // console.log(err)
             }
+
         }
 
     }

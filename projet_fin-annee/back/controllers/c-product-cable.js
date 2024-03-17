@@ -65,9 +65,10 @@ export const updateProductCableInfo = (req, res) => {
         req.body.quantite,
         req.body.prix,
         req.body.image,
+        req.body.reference,
         req.params.id
     ]
-    const q = 'UPDATE `e-rigation`.`product-cable` SET quantite=?, prix=?, image=? WHERE idcable=?'
+    const q = 'UPDATE `e-rigation`.`product-cable` SET quantite=?, prix=?, image=?, reference=? WHERE idcable=?'
     db.query(q, [...product], (err, data) => {
         if (err) return (res.status(400).json(err))
         return (res.status(200).json("Product cable updated."))

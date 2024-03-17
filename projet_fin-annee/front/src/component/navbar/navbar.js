@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../asset-images/logo.png";
 import { useDispatch } from "react-redux";
 import { showSidebar } from "../../redux-store/actions/sidebar-action";
-import { CgMenuGridR } from "react-icons/cg";
+import { CgMenuGridR, CgShoppingCart } from "react-icons/cg";
 import "./navbar.css";
 
 export const Navbar = () => {
@@ -31,11 +31,9 @@ export const Navbar = () => {
                 <NavbarContent />
             </div>
             <div
-                onClick={() => {
-                    handleClick();
-                }}
+                onClick={() => { }}
                 className="burger-menu">
-                <CgMenuGridR />
+                <Link to="/panier"><CgShoppingCart /></Link>
             </div>
         </div>
     );

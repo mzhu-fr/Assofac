@@ -39,6 +39,59 @@
     font-weight: bold;
 }
 
+.product-cable-display-admin{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-cable-unique-admin{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    height: auto;
+    width: 250px;
+    padding: 1em;
+
+    border-radius: 0px 0px 25px;
+    box-shadow: 1px 1px 1px var(--dark);
+    /* text-align:end; */
+}
+
+.product-cable-display-admin img{
+    object-fit: contain;
+}
+
+.update-product-modal {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.update-product-modal-overlay {
+    position: fixed;
+    z-index: 100;
+    /* width: 100vw;
+    height: 100vh; */
+    top: 0; left:0;right:0;bottom:0;
+    background-color: rgba(0, 0,0,0.5);
+}
+
+.update-product-modal-window {
+    display: block;
+    z-index: 101;
+    background-color: var(--white);
+    position: fixed;
+}
+
+.update-product-responsive tr{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 @media (max-width:1200px) {
     .user-card {
         padding: 1em;

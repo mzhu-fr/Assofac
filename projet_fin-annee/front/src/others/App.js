@@ -15,16 +15,16 @@ function App() {
   return (
     <div>
       <Provider store={Store}>
-      <AuthContextProvider>
-      <Navbar />
-      <Sidebar />
-      <Suspense>
-        <Outlet />
-      </Suspense>
-      <Footer />
-      </AuthContextProvider>
-    </Provider>
-  </div>
+        <AuthContextProvider>
+          <Navbar />
+          <Sidebar />
+          <Suspense>
+            <Outlet />
+          </Suspense>
+          <Footer />
+        </AuthContextProvider>
+      </Provider>
+    </div>
   );
 }
 
