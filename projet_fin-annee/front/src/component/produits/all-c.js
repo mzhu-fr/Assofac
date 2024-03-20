@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './display-produits.css'
+import { AddProductToCart } from '../panier/panier'
 
 export const FiltreC = () => {
 
@@ -64,6 +65,7 @@ export const FiltreC = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        <button onClick={() => AddProductToCart(one.idcable)}>Ajouter produit</button>
                     </div>
                 </div>
             )) : ""}

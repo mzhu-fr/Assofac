@@ -8,6 +8,7 @@ import { About } from "../pages/About/About.js";
 import { ErrorPage } from "../pages/Error/Error.js";
 import { Admin } from "../pages/Admin/Admin.js";
 import { Profil } from "../pages/Profil/Profil.js";
+import { Panier } from "../pages/Panier/Panier.js";
 
 export const router = createBrowserRouter([
   {
@@ -39,5 +40,9 @@ export const router = createBrowserRouter([
         path: "/profil",
         element: <Profil />,
       },
+      {
+        path: "/panier",
+        element: <Panier />
+      }
     ]
   }]);

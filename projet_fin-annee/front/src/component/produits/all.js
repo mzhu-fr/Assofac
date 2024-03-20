@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './display-produits.css'
-
+import { AddProductToCart } from '../panier/panier'
 export const FiltreAll = () => {
     const [all, setAll] = useState()
     useEffect(() => {
@@ -14,13 +14,13 @@ export const FiltreAll = () => {
             }
 
         }
-
         getAll()
     }, [])
+
     return (
         <div className="display-product-cable">
             {all && all[0] ? all.map(one => (
-                <div className="display-one-product-card" key={one.idproduct}>
+                <div className="display-one-product-card" key={one.idcable}>
                     <img className="display-one-product-image" src={one.image} alt={one.SKU} />
                     <div className="display-one-product-info">
                         <table>
@@ -63,9 +63,11 @@ export const FiltreAll = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        <button onClick={() => AddProductToCart(one.idcable)}>Ajouter produit</button>
                     </div>
                 </div>
-            )) : ""}
-        </div>
+            )) : ""
+            }
+        </div >
     )
 }

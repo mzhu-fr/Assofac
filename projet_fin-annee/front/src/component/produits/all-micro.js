@@ -1,15 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './display-produits.css'
+import { AddProductToCart } from '../panier/panier'
 
 export const FiltreMicro = () => {
 
     const [micro, setMicro] = useState()
-
-
     useEffect(() => {
-
-
         const getMicro = async () => {
             try {
                 const res = await axios.get("http://localhost:8800/product-cable/cablemicro")
@@ -19,9 +16,7 @@ export const FiltreMicro = () => {
             }
 
         }
-
         getMicro()
-
     }, [])
     return (
         <div className="display-product-cable">
@@ -69,6 +64,7 @@ export const FiltreMicro = () => {
                                 </tr>
                             </tbody>
                         </table>
+                        <button onClick={() => AddProductToCart(one.idcable)}>Ajouter produit</button>
                     </div>
                 </div>
             )) : ""}

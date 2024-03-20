@@ -16,7 +16,6 @@ export const Commentaire = () => {
             }
             else {
                 const getRes = await res.json()
-                // console.log(getRes)
                 if (getRes[0]) {
                     setComments(getRes)
                     return

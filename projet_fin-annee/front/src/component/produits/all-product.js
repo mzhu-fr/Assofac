@@ -1,5 +1,5 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+
+import React, { useState } from 'react'
 import { FiltreAll } from './all';
 import { FiltreC } from './all-c';
 import { FiltreMicro } from './all-micro'

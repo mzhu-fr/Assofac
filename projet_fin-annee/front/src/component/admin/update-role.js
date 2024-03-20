@@ -9,7 +9,7 @@ export const UpdateRole = () => {
     const [users, setUsers] = useState()
     const [message, setMessage] = useState()
     const password = { password: "123456" }
-    useEffect(() => {
+    try {
         const getData = async () => {
             try {
                 const res = await axios.get("http://localhost:8800/user-data/all-users/" + currentUser.iduser)
@@ -19,7 +19,9 @@ export const UpdateRole = () => {
             }
         }
         getData()
-    }, [])
+    } catch (err) {
+        console.error("Erreur lors de la récupération de données.")
+    }
 
     if (currentUser && currentUser.role === "SAdmin") {
         const handleRefresh = () => {

@@ -13,7 +13,7 @@ export const SeeProd = () => {
         quantite: "",
         reference: ""
     })
-    useEffect(() => {
+    try {
         const getData = async () => {
             try {
                 const res = await axios.get("http://localhost:8800/product-cable/cable")
@@ -23,7 +23,9 @@ export const SeeProd = () => {
             }
         }
         getData()
-    }, [])
+    } catch (err) {
+        console.error("Erreur lors de la récupération de données.")
+    }
 
     const handleDelete = async (id) => {
         try {

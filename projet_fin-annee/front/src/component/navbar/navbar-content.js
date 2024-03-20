@@ -21,7 +21,6 @@ export const NavbarContent = () => {
       console.log(err)
     }
   }
-  // console.log(currentUser)
   return (
     <div className="navbar-content-links">
       <Link to="/" onClick={handleCloseSidebar}>Accueil</Link>
