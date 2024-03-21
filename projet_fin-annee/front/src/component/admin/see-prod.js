@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { AiFillCloseSquare } from 'react-icons/ai';
 import axios from 'axios'
 import './produits.css'
@@ -18,6 +18,12 @@ export const SeeProd = () => {
             try {
                 const res = await axios.get("http://localhost:8800/product-cable/cable")
                 setData(res.data)
+                setUpdateInput({
+                    image: res.data.image,
+                    prix: res.data.prix,
+                    quantite: res.data.prix,
+                    reference: res.data.reference
+                })
             } catch (err) {
                 console.log(err)
             }
@@ -60,7 +66,6 @@ export const SeeProd = () => {
             quantite: cable.quantite,
             reference: cable.reference
         })
-        // console.log(updateInput)
         setOpenModal(true)
     }
     const handleCloseModal = () => {
@@ -73,7 +78,6 @@ export const SeeProd = () => {
         })
         setUpdateCable({})
     }
-    console.log(updateInput)
     return (
         <>
             {openModal ? <div className='update-product-modal'>

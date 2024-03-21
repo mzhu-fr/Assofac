@@ -5,7 +5,6 @@ import './profil.css'
 
 export default function ShowProfil() {
     const { currentUser } = useContext(AuthContext)
-    // console.log(currentUser)
     if (!currentUser) {
         return (<><Navigate to="/" /></>)
     }

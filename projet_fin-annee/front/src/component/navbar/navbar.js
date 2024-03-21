@@ -10,7 +10,6 @@ import "./navbar.css";
 export const Navbar = () => {
     const dispatch = useDispatch();
     const handleClick = () => {
-        console.log("show sidebar");
         dispatch(showSidebar());
     };
     return (

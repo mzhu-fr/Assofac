@@ -87,7 +87,6 @@ export const Register = () => {
             }
         }
     }
-    console.log(user)
     return (
         <div className="register-form">
             <p>{message ? <>{message}</> : ""}</p>

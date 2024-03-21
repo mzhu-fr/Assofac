@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import { Provider } from "react-redux";
@@ -14,7 +14,7 @@ import axios from 'axios'
 
 function App() {
   const [dataProduct, setDataProduct] = useState({})
-  try {
+  useEffect(() => {
     const getData = async () => {
       try {
         const res = await axios.get("http://localhost:8800/product-cable/cable")
@@ -28,9 +28,7 @@ function App() {
       }
     }
     getData()
-  } catch (err) {
-    console.log(err)
-  }
+  })
   return (
     <div>
       <Provider store={Store}>

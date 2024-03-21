@@ -9,7 +9,6 @@ export const Sidebar = () => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-        console.log("close sidebar")
         dispatch(hideSidebar());
     }
     return (

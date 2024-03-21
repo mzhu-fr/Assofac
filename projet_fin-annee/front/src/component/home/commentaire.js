@@ -25,7 +25,6 @@ export const Commentaire = () => {
         const interval = setInterval(getData, 3000)
         return () => clearInterval(interval)
     }, [])
-    // console.log(comments)
     return (
         <div className="all-comments">
             {comments ? comments.map(comment => (

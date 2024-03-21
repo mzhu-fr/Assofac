@@ -1,0 +1,47 @@
+.display-prix-panier{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.5em;
+}
+
+.produit-panier th{
+    padding: 0.5em;
+}
+
+.produit-panier td {
+    text-align: right;
+}
+
+.display-annuler-payer {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.display-annuler-payer button {
+    font-size: 2em;
+}
+
+.retirer-panier,
+.annuler-panier {
+   color: red;
+}
+
+.ajouter-panier,
+.payer-panier {
+    color: green;
+}
+
+.panier button {
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.titre-display-prix-panier{
+    font-weight: bold;
+}
+
+.panier-vide {
+    font-size: 3em;
+}

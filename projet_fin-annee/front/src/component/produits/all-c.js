@@ -13,7 +13,7 @@ export const FiltreC = () => {
                 const res = await axios.get("http://localhost:8800/product-cable/cableC")
                 setUsbC(res.data)
             } catch (err) {
-                console.log(err)
+                console.error(err)
             }
 
         }
