@@ -17,13 +17,19 @@ export const Login = () => {
     }
     const handleSubmit = async e => {
         e.preventDefault();
-        try {
-            await login(inputs);
-            navigate('/profil')
+        if ((inputs.email.length || inputs.password.length) <= 0) {
+            setMessage("Merci de remplir tous les champs.")
+            return
         }
-        catch (err) {
-            console.log(err.response.data);
-            setMessage(err.response.data)
+        else {
+            try {
+                await login(inputs);
+                navigate('/profil')
+            }
+            catch (err) {
+                console.log(err.response.data);
+                setMessage(err.response.data)
+            }
         }
     }
     return (

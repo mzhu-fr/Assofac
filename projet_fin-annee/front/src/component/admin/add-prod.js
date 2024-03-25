@@ -25,7 +25,7 @@ export const AddProd = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        if ((inputs.SKU || inputs.reference || inputs.quantite || inputs.longueur || inputs.poids || inputs.couleur || inputs.type || inputs.entree_type || inputs.prix || inputs.vitesse || inputs.image) < 0) {
+        if ((inputs.SKU || inputs.reference || inputs.quantite || inputs.longueur || inputs.poids || inputs.couleur || inputs.type || inputs.entree_type || inputs.prix || inputs.vitesse || inputs.image) <= 0) {
             setMessage("Remplir tous les champs.")
             return
         }

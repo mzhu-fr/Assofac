@@ -25,8 +25,8 @@ export const Connexion = () => {
         return (
             <div className="connexion">
                 <div className="login-register">
-                    <div className={"login-register-h2 " + (toLogin ? "active" : "")} onClick={handleLogin}>Login</div>
-                    <div className={"login-register-h2 " + (toRegister ? "active" : "")} onClick={handleRegister}>Register</div>
+                    <div className={"login-register-h2 " + (toLogin ? "active" : "")} onClick={handleLogin}>Se connecter</div>
+                    <div className={"login-register-h2 " + (toRegister ? "active" : "")} onClick={handleRegister}>S'enregister</div>
                 </div>
                 {toLogin ? <Login /> : ""}
                 {toRegister ? <Register /> : ""}

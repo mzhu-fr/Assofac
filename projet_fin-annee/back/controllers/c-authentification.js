@@ -36,23 +36,27 @@ export const register = (req, res) => {
 }
 
 export const login = (req, res) => {
-    const query = "SELECT * FROM `e-rigation`.`user` WHERE email = ?"
-    db.query(query, [req.body.email], (err, data) => {
+    const postLogin = async () => {
+        const query = "SELECT * FROM `e-rigation`.`user` WHERE email = ?"
+        db.query(query, [req.body.email], (err, data) => {
 
-        if (err) return (res.status(400).json(err));
-        if (data.length === 0) return res.status(400).json("Unkwown email.");
+            if (err) return (res.status(400).json(err));
+            if (data.length === 0) return res.status(400).json("Unkwown email.");
 
-        // COMPARE PASSWORD
-        const isPasswordCorrect = bcrypt.compareSync(req.body.password, data[0].password);
-        if (!isPasswordCorrect) return res.status(400).json("Wrong email or password.");
+            // COMPARE PASSWORD
+            const isPasswordCorrect = bcrypt.compareSync(req.body.password, data[0].password);
+            if (!isPasswordCorrect) return res.status(400).json("Wrong email or password.");
 
-        const { password, ...other } = data[0]
-        const token = jwt.sign({ id: data[0].iduser }, "jwtkey");
-        // const response = { ...other, authToken: token }
-        res.cookie("login_token", token, {
-            httpOnly: true
-        }).status(200).json(other)
-    })
+            const { password, ...other } = data[0]
+            const token = jwt.sign({ id: data[0].iduser }, "jwtkey");
+            // const response = { ...other, authToken: token }
+            res.cookie("login_token", token, {
+                httpOnly: true
+            }).status(200).json(other)
+        })
+    }
+    postLogin();
+
 }
 
 export const logout = (req, res) => {
