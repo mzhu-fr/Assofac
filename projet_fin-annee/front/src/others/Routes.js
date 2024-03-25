@@ -9,6 +9,9 @@ import { ErrorPage } from "../pages/Error/Error.js";
 import { Admin } from "../pages/Admin/Admin.js";
 import { Profil } from "../pages/Profil/Profil.js";
 import { Panier } from "../pages/Panier/Panier.js";
+import { CGV } from "../pages/cgv/CGV.js";
+import { CGU } from "../pages/cgv/CGU.js";
+import { Termes } from "../pages/cgv/Termes.js";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ export const router = createBrowserRouter([
       {
         path: "/panier",
         element: <Panier />
+      },
+      {
+        path: "/cgv",
+        element: <CGV />
+      },
+      {
+        path: "/cgu",
+        element: <CGU />
+      },
+      {
+        path: "/termes",
+        element: <Termes />
       }
     ]
   }]);

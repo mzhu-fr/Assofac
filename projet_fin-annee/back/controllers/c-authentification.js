@@ -9,8 +9,12 @@ export const register = (req, res) => {
     db.query(q, req.body.email, (err, data) => {
         if (err) return (res.status(400).json(err))
         if (data.length) return (res.status(400).json("Email already in use."))
+
+
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(req.body.password, salt);
+
+
         const q = 'INSERT INTO `e-rigation`.`user` (`nom`, `prenom`, `adresse`, `complement_adresse`, `code_postal`, `ville`, `telephone`, `email`, `password`) VALUES (?)'
         const user = [
             req.body.nom,

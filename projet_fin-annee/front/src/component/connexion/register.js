@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './connexion.css'
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,}$/i;
-const passwordRegex = /^[a-zA-Z0-9]{6,12}$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\d!@#$%^&*()-_+=]{12,18}$/;
 const phoneRegex = /^0[67][0-9]{8}$/
 const codePostRegex = /^[0-9]{5}$/
 
@@ -51,7 +51,7 @@ export const Register = () => {
             return;
         }
         if (!passwordRegex.test(user.password)) {
-            setMessage("Le mot de passe doit être compris entre 6 et 12 charactères.");
+            setMessage("Le mot de passe doit être compris entre 12 et 18 charactères. Contenir une majuscule, une minuscule, un chiffre et un caractère spécial.");
             return;
         }
         else {
