@@ -30,7 +30,6 @@ export const Navbar = () => {
                 <NavbarContent />
             </div>
             <div
-                onClick={() => { }}
                 className="burger-menu">
                 <Link to="/panier"><CgShoppingCart /></Link>
             </div>
