@@ -21,7 +21,7 @@ function App() {
         setDataProduct(res.data)
         localStorage.setItem("produits", JSON.stringify(dataProduct))
         if (!localStorage.getItem("panier")) {
-          localStorage.setItem("panier", [])
+          localStorage.setItem("panier", "[]")
         }
       } catch (err) {
         console.log("Erreur dans la récupération de données.")

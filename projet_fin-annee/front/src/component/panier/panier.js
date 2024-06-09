@@ -57,7 +57,7 @@ export async function RemoveProductToCart(idProduct) {
         var panier = await JSON.parse(localStorage.getItem("panier"))
         for (let i = 0; panier[i]; i++) {
             if (panier[i].idcable === idProduct) {
-                if (panier[i].quantite >= 1) {
+                if (panier[i].quantite > 1) {
                     panier[i].quantite -= 1
                 } else {
                     panier.splice(i, 1)
@@ -69,7 +69,7 @@ export async function RemoveProductToCart(idProduct) {
 }
 
 export function RemoveCart() {
-    localStorage.setItem("panier", [])
+    localStorage.setItem("panier", "[]")
 }
 
 export async function ValiderPanier(id, panierToBack) {
